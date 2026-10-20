@@ -47,8 +47,10 @@ class AlmaBuena extends StatelessWidget {
     return MaterialApp.router(
       title: 'Alma Buena',
       debugShowCheckedModeBanner: false,
+      // Material 2, igual que FlutterFlow: sin el interlineado extra de
+      // Material 3, así los textos miden lo mismo que en el Figma.
       theme: ThemeData(
-        useMaterial3: true,
+        useMaterial3: false,
         fontFamily: 'Montserrat',
         scaffoldBackgroundColor: Colors.white,
         colorScheme: ColorScheme.fromSeed(
