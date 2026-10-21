@@ -5,6 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'firebase_db.dart';
+
 // ---------------------------------------------------------------------------
 // ALMA BUENA - app completa (replica del Figma "Alma Buena - App movil")
 // Cada ruta de la app (ver main.dart) usa este widget con un valor distinto de
@@ -89,7 +91,7 @@ const Map<String, String> _kCatDesc = {
       'Conjunto de dos piezas para un look completo, se pueden usar por separado.',
 };
 
-const List<_P> _kProds = [
+const List<_P> _kProdsBase = [
   _P('Jean Mom Siena', 'Jeans', 50000, 'Chocolate', 'Chocolate', [0xFF4E3127], 'jean_siena'),
   _P('Jean Wide Leg Nado', 'Jeans', 50000, 'Negro lavado', 'Negro lavado', [0xFF3B3B3D], 'jean_nado'),
   _P('Jean Rombo', 'Jeans', 50000, 'Azul', 'Azul', [0xFF3C5F92], 'jean_rombo'),
@@ -125,6 +127,26 @@ const List<_P> _kProds = [
   _P('Conjunto Dallas', 'Conjuntos', 24000, 'Champagne', 'Champagne', [0xFFD8C9B4], 'falda_dallas'),
   _P('Conjunto Encaje Aruba', 'Conjuntos', 26000, 'Chocolate', 'Chocolate', [0xFF4E3127], 'falda_aruba'),
 ];
+
+/// Catálogo que usa la app. Arranca con los datos incorporados y, al abrir,
+/// se actualiza con los precios y la visibilidad guardados en Firebase.
+List<_P> _kProds = List<_P>.of(_kProdsBase);
+
+/// Lee la colección "productos" de Firebase y actualiza precios y prendas
+/// visibles. Si no hay conexión, la app sigue con los datos incorporados.
+Future<void> cargarCatalogoDesdeFirebase() async {
+  final datos = await FirebaseDb.leerProductos();
+  if (datos.isEmpty) return;
+  final nuevo = <_P>[];
+  for (final p in _kProdsBase) {
+    final d = datos[slugProducto(p.nombre)];
+    if (d != null && !d.activo) continue;
+    nuevo.add(d?.precio == null
+        ? p
+        : _P(p.nombre, p.cat, d!.precio!, p.color, p.colorCard, p.dots, p.img));
+  }
+  if (nuevo.isNotEmpty) _kProds = nuevo;
+}
 
 const Map<int, String> _kColorNames = {
   0xFF4E3127: 'Chocolate',
@@ -440,9 +462,13 @@ Widget _btn(String label,
       onTap);
 }
 
-Widget _waBtn({String url = _kWaGeneral, double height = 48}) => _btn(
-    'Consultar por WhatsApp',
-    onTap: () => _open(url),
+Widget _waBtn(
+        {String url = _kWaGeneral, double height = 48, String? consulta}) =>
+    _btn('Consultar por WhatsApp',
+    onTap: () {
+      if (consulta != null) FirebaseDb.registrarConsulta(consulta);
+      _open(url);
+    },
     bg: _kB,
     fg: _kW,
     iconL: 'wa',
@@ -483,6 +509,8 @@ class _AlmaBuenaAppState extends State<AlmaBuenaApp>
   // comunidad
   final TextEditingController _mailCtrl = TextEditingController();
   bool _acepto = true;
+  bool _enviando = false;
+  String? _errorMail;
   // splash
   AnimationController? _load;
 
@@ -1776,7 +1804,7 @@ class _AlmaBuenaAppState extends State<AlmaBuenaApp>
             decoration: const BoxDecoration(
                 color: _kW, border: Border(top: BorderSide(color: _kL))),
             padding: EdgeInsets.fromLTRB(20, 12, 20, math.max(bottom, 12)),
-            child: _waBtn(url: _kWaProducto, height: 52),
+            child: _waBtn(url: _kWaProducto, height: 52, consulta: p.nombre),
           ),
         ],
       ),
@@ -2327,19 +2355,42 @@ class _AlmaBuenaAppState extends State<AlmaBuenaApp>
                   ),
                   () => setState(() => _acepto = !_acepto)),
               const SizedBox(height: 12),
-              _btn('Quiero sumarme', onTap: () {
-                if (_mailOk) {
-                  FocusScope.of(context).unfocus();
-                  _go('ComunidadOK');
+              _btn(_enviando ? 'Guardando…' : 'Quiero sumarme',
+                  onTap: () async {
+                if (!_mailOk || _enviando) return;
+                FocusScope.of(context).unfocus();
+                setState(() {
+                  _enviando = true;
+                  _errorMail = null;
+                });
+                try {
+                  await FirebaseDb.suscribir(_mailCtrl.text,
+                      notificaciones: _acepto);
+                  if (mounted) _go('ComunidadOK');
+                } catch (e) {
+                  debugPrint('Comunidad: $e');
+                  if (mounted) {
+                    setState(() {
+                      _enviando = false;
+                      _errorMail =
+                          'No pudimos guardar tu mail. Revisá tu conexión e intentá de nuevo.';
+                    });
+                  }
                 }
               },
-                  bg: ok ? _kB : const Color(0xFFD9D4CF),
+                  bg: ok && !_enviando ? _kB : const Color(0xFFD9D4CF),
                   fg: _kW,
                   iconL: 'bell',
                   height: 50,
                   fs: 13,
                   w: _sb,
                   ls: 0.12),
+              if (_errorMail != null) ...[
+                const SizedBox(height: 10),
+                Text(_errorMail!,
+                    textAlign: TextAlign.center,
+                    style: _t(12, _m, const Color(0xFFC0262D))),
+              ],
               const SizedBox(height: 12),
               Text('Podés darte de baja cuando quieras. No compartimos tu mail.',
                   textAlign: TextAlign.center, style: _t(11, _r, _k9E)),
@@ -2530,6 +2581,8 @@ class _AlmaBuenaAppState extends State<AlmaBuenaApp>
     setState(() => _girando = true);
     _spin!.forward(from: 0).whenComplete(() {
       _gPremio = _segs[i];
+      const codigos = {'50': 'ALMA50', '10': 'ALMA10', '2x1': 'ALMA2X1'};
+      FirebaseDb.registrarGiro(_gPremio, codigos[_gPremio]);
       Future.delayed(const Duration(milliseconds: 700), () {
         if (mounted) _go('RuletaResultado');
       });
