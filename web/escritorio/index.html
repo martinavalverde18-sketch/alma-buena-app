@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#5F1725">
+<title>Alma Buena Indumentaria · Mendoza</title>
+<meta name="description" content="Alma Buena Indumentaria: ropa urbana, deportiva y de fiesta en Mendoza. Catálogo online, ruleta de beneficios y consultas por WhatsApp.">
+<link rel="icon" type="image/png" href="../favicon.png">
+<link rel="apple-touch-icon" href="../icons/Icon-192.png">
+<script>
+  // En pantallas chicas (celular) se abre la app.
+  if (window.innerWidth < 760) location.replace('../?app=1');
+</script>
+<style>
+@font-face{font-family:Montserrat;font-weight:400;font-display:swap;src:url(../assets/assets/fonts/Montserrat-Regular.ttf)}
+@font-face{font-family:Montserrat;font-weight:500;font-display:swap;src:url(../assets/assets/fonts/Montserrat-Medium.ttf)}
+@font-face{font-family:Montserrat;font-weight:600;font-display:swap;src:url(../assets/assets/fonts/Montserrat-SemiBold.ttf)}
+@font-face{font-family:Montserrat;font-weight:700;font-display:swap;src:url(../assets/assets/fonts/Montserrat-Bold.ttf)}
+:root{
+  --bordo:#5F1725; --oscuro:#1A0A0D; --negro:#121212; --gris:#6B6B6B; --linea:#E0DCD9;
+  --beige:#F7F3F0; --beige2:#F3F0EA; --rosa:#F4ECED; --rosaT:#E8CFD3; --g33:#333333; --g9E:#9E9E9E;
+  --wrap:1296px; --gutter:72px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--negro);font-family:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+img{display:block;max-width:100%}
+svg.i{flex:none;display:block}
+.wrap{width:min(var(--wrap),calc(100% - 2*var(--gutter)));margin:0 auto}
+@media (max-width:1200px){:root{--gutter:40px}}
+
+/* ---------- tipografía y botones ---------- */
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--bordo);margin:0}
+.h2{font-size:36px;line-height:1.2;font-weight:700;margin:10px 0 0}
+.h1{font-size:44px;line-height:1.15;font-weight:700;margin:10px 0 0}
+.lead{font-size:16px;color:var(--g33);margin:14px 0 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:46px;padding:0 28px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s;white-space:nowrap}
+.btn-bordo{background:var(--bordo);color:#fff}
+.btn-bordo:hover{background:#4a111c}
+.btn-negro{background:var(--negro);color:#fff}
+.btn-negro:hover{background:#000}
+.btn-linea{border:1.5px solid var(--negro);color:var(--negro);background:#fff}
+.btn-linea:hover{background:var(--negro);color:#fff}
+.btn-blanco{background:#fff;color:var(--bordo)}
+.btn-blanco:hover{background:var(--rosa)}
+.link-arr{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--bordo)}
+.link-arr:hover{text-decoration:underline;text-underline-offset:4px}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:40px}
+
+/* ---------- header ---------- */
+header.top{position:sticky;top:0;z-index:50;background:#fff}
+.promo{background:var(--bordo);color:#fff;height:35px;display:flex;align-items:center;justify-content:center;gap:28px;font-size:12px;font-weight:500;letter-spacing:.04em}
+.promo span{display:inline-flex;align-items:center;gap:8px}
+.promo .dot{opacity:.6}
+.promo button{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+nav.main{height:92px;border-bottom:1px solid var(--linea)}
+nav.main .wrap{height:100%;display:grid;grid-template-columns:1fr auto 1fr;align-items:center}
+.nav-l,.nav-r{display:flex;align-items:center;gap:40px}
+.nav-r{justify-content:flex-end;gap:36px}
+.nav-a{font-size:13px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;padding:6px 0;border-bottom:2px solid transparent;white-space:nowrap}
+.nav-a:hover{color:var(--bordo)}
+.nav-a.on{color:var(--bordo);border-bottom-color:var(--bordo)}
+.nav-logo img{width:90px;height:58px;object-fit:contain}
+.nav-ico{display:flex;gap:16px}
+.nav-ico a{color:var(--negro)}
+.nav-ico a:hover{color:var(--bordo)}
+@media (max-width:1180px){.nav-l,.nav-r{gap:22px}.nav-a{letter-spacing:.08em;font-size:12px}.nav-ico{display:none}}
+
+/* ---------- inicio ---------- */
+.hero{background:#000;height:clamp(380px,43.4vw,625px);display:flex;justify-content:center;overflow:hidden}
+.hero img{height:100%;width:auto;max-width:none;clip-path:inset(0 .5% 0 0)}
+.benef{background:var(--beige)}
+.benef .wrap{display:flex;justify-content:space-between;gap:24px;padding:28px 0}
+.benef-it{display:flex;gap:14px;align-items:center}
+.benef-it b{display:block;font-size:16px;font-weight:600;line-height:20px}
+.benef-it small{display:block;font-size:13px;color:var(--gris);line-height:18px;margin-top:2px}
+.cats{padding:96px 0 90px}
+.cat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:24px}
+.cat-card .ph{aspect-ratio:3/4;overflow:hidden;background:var(--beige)}
+.cat-card img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.cat-card:hover img{transform:scale(1.04)}
+.cat-card .nm{display:flex;align-items:center;gap:8px;margin-top:14px;font-size:18px;font-weight:600}
+.cat-card:hover .nm{color:var(--bordo)}
+.nove{padding:72px 0 104px;background:#fff}
+
+/* ---------- tarjeta de producto ---------- */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:48px 32px}
+@media (max-width:1100px){.grid{grid-template-columns:repeat(3,1fr)}.cat-grid{grid-template-columns:repeat(3,1fr)}}
+.card{display:flex;flex-direction:column}
+.card .ph{aspect-ratio:3/4;overflow:hidden;background:var(--beige);position:relative}
+.card .ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .ph img{transform:scale(1.04)}
+.card .nm{font-size:16px;font-weight:500;margin:16px 0 0;line-height:21px}
+.card .pr{font-size:16px;font-weight:600;margin-top:6px;line-height:21px}
+.card .cu{font-size:13px;color:var(--gris);margin-top:6px}
+.dots{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:13px;color:var(--g33)}
+.dots i{width:14px;height:14px;border-radius:50%;border:1px solid rgba(0,0,0,.18);display:inline-block}
+.card .btn{margin-top:auto;width:100%;height:44px}
+.card .cuerpo{flex:1;display:flex;flex-direction:column;padding-bottom:16px}
+
+/* ---------- secciones varias ---------- */
+.nos-res{display:grid;grid-template-columns:620fr 820fr;background:var(--rosa);min-height:620px}
+.nos-res .ph{overflow:hidden}
+.nos-res .ph img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.nos-res .tx{align-self:center;padding:60px 96px}
+.nos-res h3{font-size:36px;line-height:1.25;margin:16px 0 0;font-weight:700;max-width:620px}
+.nos-res p{font-size:16px;color:var(--g33);max-width:560px;margin:22px 0 28px;line-height:1.65}
+.ig{text-align:center;padding:96px 0}
+.ig h3{font-size:30px;margin:8px 0 0}
+.ig p{max-width:520px;margin:18px auto 24px;color:var(--g33)}
+.ruleta-band{background:linear-gradient(120deg,var(--bordo),var(--oscuro));color:#fff;overflow:hidden}
+.ruleta-band .wrap{display:grid;grid-template-columns:1fr 360px;align-items:center;gap:60px;padding:72px 0}
+.ruleta-band .eyebrow{color:var(--rosaT)}
+.ruleta-band p{color:var(--rosaT);font-size:16px;max-width:520px}
+.ruleta-band .mini{width:320px;height:320px;justify-self:center;cursor:pointer;transition:transform .6s}
+.ruleta-band .mini:hover{transform:rotate(22deg)}
+.comu{background:var(--beige)}
+.comu .wrap{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding:80px 0}
+.comu h3{font-size:34px;line-height:1.2;margin:10px 0 0}
+.comu p{color:var(--g33);margin:14px 0 0}
+.comu ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px}
+.comu li{display:flex;gap:12px;align-items:flex-start;font-size:14px}
+.comu li b{display:block;font-size:15px}
+.form-mail{background:#fff;padding:36px;border:1px solid var(--linea)}
+.form-mail label.t{display:block;font-size:13px;font-weight:500;margin-bottom:8px}
+.form-mail .row{display:flex;gap:10px}
+.form-mail input[type=email]{flex:1;height:50px;border:1.5px solid var(--linea);padding:0 16px;font:inherit;font-size:15px;outline:none}
+.form-mail input[type=email]:focus{border-color:var(--bordo)}
+.form-mail .chk{display:flex;gap:10px;align-items:flex-start;margin-top:16px;font-size:13px;color:var(--g33);cursor:pointer}
+.form-mail .chk input{accent-color:var(--bordo);width:18px;height:18px;margin:1px 0 0}
+.form-mail .err{color:#B3261E;font-size:13px;margin-top:10px;min-height:0}
+.form-mail .fine{font-size:12px;color:var(--g9E);margin-top:16px}
+.ok-box{text-align:center;padding:10px 0}
+.ok-box .circ{width:64px;height:64px;border-radius:50%;background:var(--bordo);color:#fff;display:grid;place-items:center;margin:0 auto 14px}
+.ok-box h4{font-size:24px;margin:6px 0 8px}
+.ok-box p{margin:0 auto;max-width:380px;color:var(--g33);font-size:14px}
+
+/* ---------- footer ---------- */
+footer{background:var(--negro);color:#fff}
+footer .cols{display:grid;grid-template-columns:300px 140px 155px 292px;justify-content:space-between;padding:72px 0 56px;gap:40px}
+footer .logo img{width:112px;height:72px;object-fit:contain}
+footer .desc{color:#BDBDBD;font-size:14px;line-height:1.7;margin:20px 0}
+footer .soc{display:flex;gap:14px}
+footer .soc a{width:40px;height:40px;border:1px solid #3B3B3D;display:grid;place-items:center;color:#fff}
+footer .soc a:hover{background:var(--bordo);border-color:var(--bordo)}
+footer h5{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--rosaT);margin:0 0 14px;font-weight:500}
+footer .lk{display:block;font-size:14px;color:#E0DCD9;margin-bottom:14px}
+footer .lk:hover{color:#fff;text-decoration:underline}
+footer .fila{display:flex;gap:10px;align-items:flex-start;font-size:14px;color:#E0DCD9;margin-bottom:14px}
+footer a.fila:hover{color:#fff}
+footer .legal{border-top:1px solid #333;display:flex;justify-content:space-between;padding:22px 0 26px;font-size:12px;color:#9E9E9E;letter-spacing:.04em}
+.wa-flot{position:fixed;right:32px;bottom:32px;width:62px;height:62px;border-radius:50%;background:var(--bordo);color:#fff;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25);z-index:60;transition:transform .2s}
+.wa-flot:hover{transform:scale(1.07)}
+
+/* ---------- productos ---------- */
+.migas{font-size:13px;color:var(--gris);display:flex;gap:8px;align-items:center}
+.migas a:hover{color:var(--bordo);text-decoration:underline}
+.migas b{color:var(--negro);font-weight:500}
+.cat-head{padding:56px 0 48px}
+.aviso{display:inline-flex;align-items:center;gap:10px;background:var(--rosa);padding:12px 18px;margin-top:18px;font-size:14px;color:var(--g33)}
+.filtros{position:sticky;top:127px;z-index:20;background:#fff;border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.filtros .wrap{display:flex;justify-content:space-between;align-items:center;padding:24px 0 25px}
+.chips{display:flex;gap:10px;flex-wrap:wrap}
+.chip{height:40px;padding:0 20px;border:1px solid var(--negro);border-radius:999px;font-size:14px;font-weight:500;background:#fff}
+.chip:hover{background:var(--beige)}
+.chip.on{background:var(--negro);color:#fff}
+.count{font-size:14px;color:var(--gris)}
+.cat-sec{padding:72px 0 24px}
+.cat-sec .t{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:36px;border-bottom:1px solid var(--linea);padding-bottom:14px}
+.cat-sec .t h2{font-size:28px;margin:0}
+.cat-sec .t span{font-size:14px;color:var(--gris)}
+.cierre{text-align:center;padding:72px 0 96px}
+.cierre h3{font-size:26px;margin:0}
+.cierre p{color:var(--g33);margin:10px 0 18px}
+
+/* ---------- detalle ---------- */
+.det-top{display:flex;justify-content:space-between;align-items:center;padding:28px 0 8px}
+.volver{display:inline-flex;gap:8px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+.volver:hover{color:var(--bordo)}
+.det{display:grid;grid-template-columns:712fr 520fr;gap:72px;padding:24px 0 96px;align-items:start}
+.gal{display:grid;grid-template-columns:96px 1fr;gap:16px;position:sticky;top:150px}
+.gal .mini{display:grid;gap:12px;align-content:start}
+.gal .mini button{aspect-ratio:3/4;overflow:hidden;border:1.5px solid transparent;opacity:.6}
+.gal .mini button.on{border-color:var(--negro);opacity:1}
+.gal .mini img{width:100%;height:100%;object-fit:cover}
+.gal .big{aspect-ratio:3/4;overflow:hidden;background:var(--beige)}
+.gal .big img{width:100%;height:100%;object-fit:cover}
+.info h1{font-size:32px;line-height:1.2;margin:8px 0 0;font-weight:700}
+.info .precio{font-size:28px;font-weight:700;margin-top:12px}
+.info .cuo{font-size:15px;color:var(--g33);margin-top:6px}
+.desc-box{display:flex;gap:12px;background:var(--rosa);padding:16px 18px;margin-top:24px}
+.desc-box b{display:block;font-size:16px;font-weight:600}
+.desc-box small{display:block;font-size:13px;color:var(--g33);margin-top:4px;line-height:1.5}
+.benef-ruleta{display:flex;gap:12px;align-items:center;border:1.5px solid var(--bordo);padding:14px 14px 14px 16px;margin-top:16px}
+.benef-ruleta b{display:block;color:var(--bordo);font-size:14px}
+.benef-ruleta small{color:var(--g33);font-size:13px}
+.benef-ruleta .btn{height:36px;padding:0 16px;font-size:11px;margin-left:auto}
+.lbl{font-size:15px;font-weight:500;margin:26px 0 12px}
+.lbl span{font-weight:400;color:var(--g33)}
+.colores{display:flex;gap:10px}
+.colores button{width:30px;height:30px;border-radius:50%;border:1.5px solid transparent;display:grid;place-items:center}
+.colores button i{width:22px;height:22px;border-radius:50%;border:1px solid rgba(0,0,0,.18)}
+.colores button.on{border-color:var(--negro)}
+.talles{display:flex;gap:8px}
+.talles button{min-width:50px;height:40px;padding:0 12px;border:1px solid var(--linea);font-size:14px;font-weight:500}
+.talles button:hover{border-color:var(--negro)}
+.talles button.on{background:var(--negro);border-color:var(--negro);color:#fff}
+.talles button.off{color:var(--g9E);background:var(--beige2);text-decoration:line-through;cursor:not-allowed}
+.aviso-st{font-size:12px;color:var(--gris);margin-top:10px}
+.acciones{display:grid;gap:12px;margin-top:28px}
+.acciones .btn{height:54px;width:100%}
+.retiro{display:inline-flex;gap:10px;align-items:center;margin-top:22px;font-size:14px;color:var(--g33)}
+.retiro:hover{color:var(--bordo);text-decoration:underline}
+.div{height:1px;background:var(--linea);margin:26px 0}
+.info h4{font-size:15px;margin:0 0 12px;font-weight:600}
+.info p.d{color:var(--g33);margin:0;line-height:1.65}
+.bul{display:grid;gap:10px;margin-top:18px}
+.bul div{display:flex;gap:10px;align-items:center;font-size:14px;color:var(--g33)}
+.medios{display:grid;gap:14px}
+.medios div{display:flex;gap:12px;align-items:center}
+.medios b{display:block;font-size:14px;font-weight:500}
+.medios small{display:block;font-size:13px;color:var(--gris)}
+.rel{padding:80px 0 104px;background:var(--beige)}
+.rel .card .ph{background:#fff}
+
+/* ---------- nosotras ---------- */
+.nos-hero{display:grid;grid-template-columns:640fr 800fr;min-height:760px}
+.nos-hero .ph img{width:100%;height:100%;object-fit:cover;object-position:center 25%}
+.nos-hero .tx{align-self:center;padding:80px 96px}
+.nos-hero .tx p{font-size:17px;color:var(--g33);line-height:1.7;max-width:592px;margin:22px 0 0}
+.nos-hero .firma{font-size:22px;font-weight:600;color:var(--bordo);margin-top:28px}
+.valores{background:var(--beige);padding:104px 0;text-align:center}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:56px}
+.val{background:#fff;padding:41px 40px 40px}
+.val .c{width:62px;height:62px;border-radius:50%;background:var(--rosa);color:var(--bordo);display:grid;place-items:center;margin:0 auto}
+.val h3{font-size:24px;margin:16px 0 8px}
+.val p{color:var(--g33);margin:0;line-height:1.6}
+.visit .wrap{display:flex;justify-content:space-between;align-items:center;gap:40px;padding:72px 0}
+.visit h3{font-size:30px;margin:8px 0 10px}
+.visit .dir{display:flex;gap:10px;align-items:center;color:var(--g33)}
+.visit .bts{display:flex;gap:14px}
+
+/* ---------- pagos ---------- */
+.pg-head{padding:64px 0 56px;border-bottom:1px solid var(--linea)}
+.pg-head .lead{max-width:663px}
+.pagos{padding:80px 0;display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.pago{background:var(--beige);padding:41px 37px 37px}
+.pago .c{width:64px;height:64px;border-radius:50%;background:#fff;color:var(--bordo);display:grid;place-items:center}
+.pago h3{font-size:26px;margin:20px 0 14px}
+.pill{display:inline-block;background:var(--bordo);color:#fff;font-size:13px;font-weight:600;padding:6px 14px;border-radius:999px}
+.pago ul{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:16px}
+.pago li{display:flex;gap:10px;align-items:flex-start;color:var(--g33)}
+.pago li svg{margin-top:2px;color:var(--bordo)}
+.ejemplo{display:grid;grid-template-columns:440px 1fr;gap:64px;align-items:center;border:1px solid var(--linea);padding:56px 64px;margin-bottom:80px}
+.ejemplo h3{font-size:28px;margin:10px 0 14px}
+.ejemplo p{color:var(--g33);margin:0;line-height:1.65}
+.calc{display:flex;align-items:center;gap:20px;justify-content:flex-end}
+.calc .bx{background:var(--beige);padding:20px 26px;text-align:center;min-width:150px}
+.calc .bx.fin{background:var(--bordo);color:#fff}
+.calc .bx small{display:block;font-size:13px;color:var(--gris)}
+.calc .bx.fin small{color:var(--rosaT)}
+.calc .bx b{display:block;font-size:28px;margin-top:4px}
+.calc .op{font-size:28px;color:var(--gris)}
+
+/* ---------- contacto ---------- */
+.ct{display:grid;grid-template-columns:640fr 592fr;gap:64px;padding:72px 0 96px}
+.canal{display:flex;justify-content:space-between;align-items:center;height:107px;border-bottom:1px solid var(--linea)}
+.canal:first-child{border-top:1px solid var(--linea)}
+.canal .l{display:flex;gap:20px;align-items:center}
+.canal .c{width:54px;height:54px;border-radius:50%;background:var(--rosa);color:var(--bordo);display:grid;place-items:center}
+.canal small{display:block;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--gris)}
+.canal b{display:block;font-size:20px;font-weight:600;margin-top:2px}
+.canal .r{display:flex;gap:8px;align-items:center;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--bordo)}
+.canal:hover b{color:var(--bordo)}
+.mapa{display:block;aspect-ratio:592/340;overflow:hidden;background:var(--beige)}
+.mapa img{width:100%;height:100%;object-fit:cover}
+.horarios{background:var(--beige);padding:33px;margin-top:24px}
+.horarios .t{display:flex;gap:10px;align-items:center;font-size:22px;font-weight:700}
+.horarios .f{display:flex;justify-content:space-between;margin-top:18px;font-size:16px}
+.horarios .f span{color:var(--g33)}
+
+/* ---------- comunidad (página) ---------- */
+.comu-pg{display:grid;grid-template-columns:1fr 1fr;min-height:640px}
+.comu-pg .izq{background:linear-gradient(160deg,var(--bordo),var(--oscuro));color:#fff;padding:96px;display:flex;flex-direction:column;justify-content:center}
+.comu-pg .izq .eyebrow{color:var(--rosaT)}
+.comu-pg .izq p{color:var(--rosaT);font-size:16px;max-width:460px}
+.comu-pg .izq ul{list-style:none;padding:0;margin:26px 0 0;display:grid;gap:18px}
+.comu-pg .izq li{display:flex;gap:14px;align-items:flex-start}
+.comu-pg .izq li .c{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.12);display:grid;place-items:center;flex:none}
+.comu-pg .izq li b{display:block}
+.comu-pg .izq li small{color:var(--rosaT);font-size:13px}
+.comu-pg .der{display:flex;align-items:center;justify-content:center;padding:64px;background:var(--beige)}
+.comu-pg .form-mail{width:100%;max-width:520px}
+
+/* ---------- ruleta ---------- */
+.modal{position:fixed;inset:0;z-index:100;background:rgba(18,18,18,.66);display:none;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(2px)}
+.modal.on{display:flex}
+.dlg{width:min(880px,100%);max-height:calc(100vh - 48px);overflow:auto;background:linear-gradient(160deg,var(--bordo),var(--oscuro));color:#fff;display:grid;grid-template-columns:1fr 1fr;position:relative;box-shadow:0 30px 80px rgba(0,0,0,.45)}
+.dlg .cerrar{position:absolute;top:14px;right:16px;display:flex;gap:6px;align-items:center;color:var(--rosaT);font-size:13px;font-weight:500;padding:6px 8px;z-index:2}
+.dlg .cerrar:hover{color:#fff}
+.dlg .izq{padding:56px 48px;display:flex;flex-direction:column;justify-content:center}
+.dlg .izq img.lg{width:96px;height:62px;object-fit:contain;margin-bottom:22px}
+.dlg .eyebrow{color:var(--rosaT)}
+.dlg h2{font-size:34px;line-height:1.15;margin:12px 0}
+.dlg p{color:var(--rosaT);margin:0}
+.dlg .nota{font-size:12px;color:#BFA3A8;margin-top:16px}
+.dlg .btn{margin-top:26px;height:54px;width:100%}
+.dlg .der{display:flex;align-items:center;justify-content:center;padding:36px}
+.rueda{position:relative;width:360px;height:360px}
+.rueda .fondo{position:absolute;inset:0;border-radius:50%;background:rgba(244,236,237,.08)}
+.rueda canvas{position:absolute;left:20px;top:20px;width:320px;height:320px;transition:transform 4.2s cubic-bezier(.17,.67,.12,1)}
+.rueda .centro{position:absolute;left:141px;top:141px;width:78px;height:78px;border-radius:50%;background:#fff;border:3px solid var(--bordo);display:grid;place-items:center;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.rueda .centro img{width:56px;height:36px;object-fit:contain}
+.rueda svg.puntero{position:absolute;left:157px;top:1px}
+.res{grid-column:1/-1;padding:64px 72px;text-align:center;display:none;position:relative}
+.res .ic{width:76px;height:76px;border-radius:50%;background:#fff;color:var(--bordo);display:grid;place-items:center;margin:0 auto 14px}
+.res h2{font-size:38px}
+.cupon{background:#fff;color:var(--negro);border-radius:16px;padding:22px 26px 20px;max-width:420px;margin:22px auto 0}
+.cupon .tb{font-size:10px;letter-spacing:.24em;color:var(--bordo);font-weight:500}
+.cupon .big{font-size:46px;font-weight:700;color:var(--bordo);line-height:1.2}
+.cupon .ds{font-size:13px;color:var(--gris)}
+.cupon .dash{border-top:1.5px dashed var(--linea);margin:14px 0}
+.cupon .cod{display:flex;justify-content:space-between;align-items:center}
+.cupon .cod b{font-size:22px;letter-spacing:.14em}
+.cupon .cod button{display:inline-flex;gap:6px;align-items:center;font-size:12px;font-weight:600;color:var(--bordo);letter-spacing:.1em}
+.cupon .vl{font-size:11px;color:var(--g9E);margin-top:8px}
+.res .bts{display:flex;gap:14px;justify-content:center;margin-top:28px}
+.res .bts .btn{width:auto;margin:0;height:50px}
+.res .btn-tr{border:1.5px solid rgba(255,255,255,.6);color:#fff}
+.res .btn-tr:hover{background:rgba(255,255,255,.1)}
+canvas.confeti{position:absolute;left:0;top:0;width:100%;height:260px;pointer-events:none}
+
+.toast{position:fixed;left:50%;bottom:32px;transform:translateX(-50%) translateY(20px);background:var(--negro);color:#fff;padding:12px 20px;font-size:14px;opacity:0;transition:all .3s;z-index:200;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+main{min-height:60vh}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="promo">
+    <span><svg class="i" data-i="card" width="16" height="16"></svg>3 cuotas sin interés con tarjetas bancarias</span>
+    <span class="dot">·</span>
+    <span><svg class="i" data-i="cash" width="16" height="16"></svg>20% OFF en efectivo o transferencia</span>
+    <span class="dot">·</span>
+    <button type="button" data-ruleta><svg class="i" data-i="gift" width="16" height="16"></svg>Girá la ruleta y ganá un beneficio</button>
+  </div>
+  <nav class="main">
+    <div class="wrap">
+      <div class="nav-l">
+        <a class="nav-a" href="#/" data-nav="inicio">Inicio</a>
+        <a class="nav-a" href="#/productos" data-nav="productos">Productos</a>
+        <a class="nav-a" href="#/nosotras" data-nav="nosotras">Sobre nosotras</a>
+      </div>
+      <a class="nav-logo" href="#/" aria-label="Alma Buena — inicio"><img src="../assets/assets/images/logo_negro.png" alt="Alma Buena Indumentaria"></a>
+      <div class="nav-r">
+        <a class="nav-a" href="#/pagos" data-nav="pagos">Métodos de pago</a>
+        <a class="nav-a" href="#/contacto" data-nav="contacto">Contacto</a>
+        <a class="nav-a" href="#/comunidad" data-nav="comunidad">Comunidad</a>
+        <div class="nav-ico">
+          <a href="https://www.instagram.com/almabuena.ind/?hl=es" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" data-i="ig" width="20" height="20"></svg></a>
+          <a href="https://www.tiktok.com/@almabuena.ind" target="_blank" rel="noopener" aria-label="TikTok"><svg class="i" data-i="tiktok" width="20" height="20"></svg></a>
+          <a data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i" data-i="wa" width="20" height="20"></svg></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main id="app"></main>
+
+<!-- Comunidad (newsletter): aparece en todas las páginas menos en la de Comunidad -->
+<section class="comu" id="comuBand">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Comunidad Alma Buena</p>
+      <h3>Sumate y enterate primero</h3>
+      <p>Dejanos tu mail y te avisamos de ingresos nuevos, descuentos exclusivos y novedades del local.</p>
+      <ul>
+        <li><svg class="i" data-i="bag" width="22" height="22" style="color:var(--bordo)"></svg><div><b>Ingresos nuevos</b>Las prendas nuevas antes que nadie.</div></li>
+        <li><svg class="i" data-i="tag" width="22" height="22" style="color:var(--bordo)"></svg><div><b>Descuentos exclusivos</b>Promos solo para la comunidad.</div></li>
+        <li><svg class="i" data-i="bell" width="22" height="22" style="color:var(--bordo)"></svg><div><b>Novedades del local</b>Eventos, horarios especiales y más.</div></li>
+      </ul>
+    </div>
+    <div class="form-mail" data-form></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <a class="logo" href="#/"><img src="../assets/assets/images/logo_blanco.png" alt="Alma Buena"></a>
+        <p class="desc">Ropa que acompaña. Indumentaria urbana, deportiva y de fiesta en Mendoza.</p>
+        <div class="soc">
+          <a href="https://www.instagram.com/almabuena.ind/?hl=es" target="_blank" rel="noopener" aria-label="Instagram"><svg class="i" data-i="ig" width="18" height="18"></svg></a>
+          <a href="https://www.tiktok.com/@almabuena.ind" target="_blank" rel="noopener" aria-label="TikTok"><svg class="i" data-i="tiktok" width="18" height="18"></svg></a>
+          <a data-wa href="#" target="_blank" rel="noopener" aria-label="WhatsApp"><svg class="i" data-i="wa" width="18" height="18"></svg></a>
+          <a href="mailto:almabuena.ind@gmail.com" aria-label="Mail"><svg class="i" data-i="mail" width="18" height="18"></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>Información</h5>
+        <a class="lk" href="#/">Inicio</a>
+        <a class="lk" href="#/productos">Productos</a>
+        <a class="lk" href="#/nosotras">Sobre nosotras</a>
+        <a class="lk" href="#/pagos">Métodos de pago</a>
+        <a class="lk" href="#/contacto">Contacto</a>
+        <a class="lk" href="#/comunidad">Comunidad</a>
+      </div>
+      <div>
+        <h5>Horarios</h5>
+        <div class="fila"><svg class="i" data-i="clock" width="18" height="18"></svg><div>Lunes a sábado<br>10:00 – 13:30 hs<br>17:30 – 20:30 hs</div></div>
+        <div class="fila"><svg class="i" data-i="clock" width="18" height="18"></svg><div>Domingo<br>Cerrado</div></div>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <a class="fila" data-wa href="#" target="_blank" rel="noopener"><svg class="i" data-i="wa" width="18" height="18"></svg>+54 261 639-5545</a>
+        <a class="fila" href="https://www.instagram.com/almabuena.ind/?hl=es" target="_blank" rel="noopener"><svg class="i" data-i="ig" width="18" height="18"></svg>@almabuena.ind</a>
+        <a class="fila" href="mailto:almabuena.ind@gmail.com"><svg class="i" data-i="mail" width="18" height="18"></svg>almabuena.ind@gmail.com</a>
+        <a class="fila" href="https://maps.app.goo.gl/WyT4EkxYpegyDxUr9" target="_blank" rel="noopener"><svg class="i" data-i="pin" width="18" height="18"></svg>Paso de los Andes 1997, Mendoza</a>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Alma Buena Indumentaria · Mendoza, Argentina</span><span>Catálogo online · Consultas por WhatsApp</span></div>
+  </div>
+</footer>
+
+<a class="wa-flot" data-wa href="#" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp"><svg class="i" data-i="wa" width="30" height="30"></svg></a>
+
+<!-- Ruleta de beneficios -->
+<div class="modal" id="ruleta" role="dialog" aria-modal="true" aria-label="Ruleta de beneficios">
+  <div class="dlg">
+    <button class="cerrar" type="button" data-cerrar>Ahora no <svg class="i" data-i="close" width="16" height="16"></svg></button>
+    <div class="izq" id="rIzq">
+      <img class="lg" src="../assets/assets/images/logo_blanco.png" alt="Alma Buena">
+      <p class="eyebrow">Bienvenida a Alma Buena</p>
+      <h2>Girá la ruleta y ganá un beneficio</h2>
+      <p>Tenés un giro de regalo para usar en tu compra.</p>
+      <button class="btn btn-blanco" type="button" id="btnGirar"><svg class="i" data-i="star" width="18" height="18"></svg><span>Girá ahora</span></button>
+      <p class="nota">1 giro por persona · Beneficio válido por 7 días</p>
+    </div>
+    <div class="der" id="rDer">
+      <div class="rueda">
+        <div class="fondo"></div>
+        <canvas id="rueda" width="640" height="640"></canvas>
+        <div class="centro"><img src="../assets/assets/images/logo_negro.png" alt=""></div>
+        <svg class="puntero" width="46" height="52" viewBox="0 0 46 52"><path d="M23 50 L6 14 A19 19 0 1 1 40 14 Z" fill="#fff" stroke="#5F1725" stroke-width="2.5"/><circle cx="23" cy="19" r="7" fill="#5F1725"/></svg>
+      </div>
+    </div>
+    <div class="res" id="rRes"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* =====================================================================
+   DATOS (los mismos de la app)
+   ===================================================================== */
+const IMG = '../assets/assets/images/';
+const WA_NUM = '542616395545';
+const WA_GENERAL = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent('¡Hola Alma Buena! Quería hacer una consulta.');
+const MAPS = 'https://maps.app.goo.gl/WyT4EkxYpegyDxUr9';
+const IG = 'https://www.instagram.com/almabuena.ind/?hl=es';
+
+const CATS = ['Jeans','Shorts','Tops y remeras','Faldas','Bodys','Conjuntos'];
+const CAT_SUB = {
+  'Jeans':'Todos a $50.000 · Tiro medio/alto','Shorts':'5 modelos','Tops y remeras':'8 modelos',
+  'Faldas':'4 modelos','Bodys':'6 modelos','Conjuntos':'Top + falda a juego, precio por el set'};
+const CAT_DESC = {
+  'Jeans':'Jean de calce cómodo y tiro alto, ideal para el día a día. Combinalo con un body o una baby tee.',
+  'Shorts':'Short de calce cómodo, ideal para armar looks urbanos o de salida.',
+  'Tops y remeras':'Prenda versátil y cómoda, para usar todos los días o arreglarla para salir.',
+  'Faldas':'Falda con caída liviana y forro, perfecta para salidas y eventos.',
+  'Bodys':'Body de calce ajustado que estiliza la figura. Combinalo con jeans o polleras.',
+  'Conjuntos':'Conjunto de dos piezas para un look completo, se pueden usar por separado.'};
+const CAT_BUL = {
+  'Jeans':['Tiro medio alto','Pierna amplia de cadera a ruedo','Cinco bolsillos con cierre y botón'],
+  'Shorts':['Tiro medio alto','Calce cómodo','Ideal para looks urbanos o de salida'],
+  'Tops y remeras':['Tela suave y cómoda','Fácil de combinar','Para el día o para salir'],
+  'Faldas':['Con forro','Caída liviana','Perfecta para salidas y eventos'],
+  'Bodys':['Calce ajustado','Tela con elasticidad','Combina con jeans o polleras'],
+  'Conjuntos':['Top + falda a juego','Precio por el set','Se pueden usar por separado']};
+const CAT_IMG = {'Jeans':'jean_roma','Shorts':'short_puntilla','Tops y remeras':'blusa_cey','Faldas':'falda_vegas','Bodys':'body_hombro'};
+const COLOR_NAMES = {'#4E3127':'Chocolate','#3B3B3D':'Negro lavado','#3C5F92':'Azul','#A3BCD8':'Celeste','#121212':'Negro','#FFFFFF':'Blanco','#C0262D':'Rojo','#5F1725':'Bordó','#D8C9B4':'Champagne'};
+
+const P = (nombre,cat,precio,color,colorCard,dots,img)=>({nombre,cat,precio,color,colorCard,dots,img});
+const PRODS = [
+  P('Jean Mom Siena','Jeans',50000,'Chocolate','Chocolate',['#4E3127'],'jean_siena'),
+  P('Jean Wide Leg Nado','Jeans',50000,'Negro lavado','Negro lavado',['#3B3B3D'],'jean_nado'),
+  P('Jean Rombo','Jeans',50000,'Azul','Azul',['#3C5F92'],'jean_rombo'),
+  P('Jean Wide Leg Tini','Jeans',50000,'Azul','Azul',['#3C5F92'],'jean_tini'),
+  P('Jean Wide Leg Celeste','Jeans',50000,'Celeste','Celeste',['#A3BCD8'],'jean_celeste'),
+  P('Jean Wide Leg Roma','Jeans',50000,'Negro','Negro',['#121212'],'jean_roma'),
+  P('Jean Wide Leg Martina','Jeans',50000,'Celeste','Celeste',['#A3BCD8'],'jean_martina'),
+  P('Microshort con Puntilla','Shorts',12500,'Blanco','Blanco',['#FFFFFF'],'short_puntilla'),
+  P('Microshort Cuero con Cierre','Shorts',13500,'Negro','Negro',['#121212'],'short_cierre'),
+  P('Short Cuerina con Bolsillos','Shorts',13000,'Negro','2 colores',['#121212','#4E3127'],'short_bolsillos'),
+  P('Short Cuero Botones Dorados','Shorts',14500,'Chocolate','Chocolate',['#4E3127'],'short_botones'),
+  P('Short Cuero Tiro Bajo','Shorts',12000,'Negro','Negro',['#121212'],'short_tirobajo'),
+  P('Baby Tee Sandy Beach','Tops y remeras',10500,'Blanco','Blanco',['#FFFFFF'],'tee_sandy'),
+  P('Baby Tee Wild Heart','Tops y remeras',12000,'Negro','Negro',['#121212'],'tee_wild'),
+  P('Remera Morley Cuello Redondo','Tops y remeras',9000,'Rojo','3 colores',['#C0262D','#121212','#FFFFFF'],'remera_roja'),
+  P('Remera Escote V Morley','Tops y remeras',9500,'Blanco','2 colores',['#FFFFFF','#121212'],'remera_v'),
+  P('Remera Manga Japo con Tiras','Tops y remeras',10500,'Chocolate','Chocolate',['#4E3127'],'remera_japo'),
+  P('Blusa Puntilla Cey Brillo','Tops y remeras',13000,'Negro','Negro',['#121212'],'blusa_cey'),
+  P('Top Cey Brillo con Aplique','Tops y remeras',13500,'Chocolate','Chocolate',['#4E3127'],'top_cey'),
+  P('Top Pañuelo Seda con Puntilla','Tops y remeras',14000,'Negro','Negro',['#121212'],'top_panuelo'),
+  P('Mini Lentejuela Vegas','Faldas',13500,'Chocolate','Chocolate',['#4E3127'],'falda_vegas'),
+  P('Mini Tul Lentejuela y Puntilla','Faldas',14500,'Bordó','Bordó',['#5F1725'],'falda_tul'),
+  P('Mini Volado Dallas','Faldas',13000,'Champagne','Champagne',['#D8C9B4'],'falda_dallas'),
+  P('Pollera Mini Encaje Aruba','Faldas',14000,'Chocolate','Chocolate',['#4E3127'],'falda_aruba'),
+  P('Body Americano Microfibra','Bodys',5500,'Blanco','3 colores',['#FFFFFF','#4E3127','#121212'],'body_americano'),
+  P('Body Morley Cuello Redondo','Bodys',6000,'Rojo','2 colores',['#C0262D','#121212'],'body_collareta'),
+  P('Body Escote Cuadrado','Bodys',6000,'Negro','2 colores',['#121212','#FFFFFF'],'body_cuadrado'),
+  P('Body Hombro Caído Fruncido','Bodys',7000,'Chocolate','Chocolate',['#4E3127'],'body_hombro'),
+  P('Body Olimpia con Puntilla','Bodys',7000,'Chocolate','2 colores',['#4E3127','#121212'],'body_olimpia'),
+  P('Body Aplique Trébol','Bodys',5500,'Bordó','Bordó',['#5F1725'],'body_trebol'),
+  P('Conjunto Cey Brillo Negro','Conjuntos',25000,'Negro','Negro',['#121212'],'blusa_cey'),
+  P('Conjunto Cey Brillo Chocolate','Conjuntos',25500,'Chocolate','Chocolate',['#4E3127'],'top_cey'),
+  P('Conjunto Dallas','Conjuntos',24000,'Champagne','Champagne',['#D8C9B4'],'falda_dallas'),
+  P('Conjunto Encaje Aruba','Conjuntos',26000,'Chocolate','Chocolate',['#4E3127'],'falda_aruba'),
+];
+const NOVEDADES = ['Body Aplique Trébol','Mini Tul Lentejuela y Puntilla','Jean Wide Leg Celeste','Baby Tee Wild Heart'];
+
+/* =====================================================================
+   BASE DE DATOS — Firebase (Cloud Firestore, misma base que la app)
+   ===================================================================== */
+const FB_PROJECT = 'alma-buena-app';
+const FB_KEY = 'AIzaSyDS8XCAULrbArs7AvBFEfqjbq3-0mXp-Mo';
+const FB_BASE = 'https://firestore.googleapis.com/v1/projects/' + FB_PROJECT + '/databases/(default)/documents';
+const PLATAFORMA = 'web-computadora';
+
+function fbValor(v){
+  if (v === null || v === undefined) return {nullValue:null};
+  if (typeof v === 'boolean') return {booleanValue:v};
+  if (typeof v === 'number') return Number.isInteger(v) ? {integerValue:String(v)} : {doubleValue:v};
+  if (v instanceof Date) return {timestampValue:v.toISOString()};
+  return {stringValue:String(v)};
+}
+function fbDoc(c){ const f={}; for (const k in c) f[k]=fbValor(c[k]); return {fields:f}; }
+async function fbPost(path, campos){
+  const ctl = new AbortController(); const t = setTimeout(()=>ctl.abort(), 12000);
+  try {
+    return await fetch(FB_BASE + '/' + path + (path.includes('?')?'&':'?') + 'key=' + FB_KEY,
+      {method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(fbDoc(campos)), signal:ctl.signal});
+  } finally { clearTimeout(t); }
+}
+async function suscribir(email, notificaciones){
+  const mail = email.trim().toLowerCase();
+  const r = await fbPost('suscriptores?documentId=' + encodeURIComponent(mail),
+    {email:mail, notificaciones, plataforma:PLATAFORMA, creado:new Date()});
+  if (r.ok || r.status === 409) return;
+  throw new Error('Firebase ' + r.status);
+}
+function registrarGiro(premio, codigo){ fbPost('giros_ruleta',{premio, codigo, plataforma:PLATAFORMA, creado:new Date()}).catch(()=>{}); }
+function registrarConsulta(producto){ fbPost('consultas',{producto:producto.slice(0,120), plataforma:PLATAFORMA, creado:new Date()}).catch(()=>{}); }
+
+// Precios y prendas visibles desde la colección "productos" (si alguien los cargó)
+async function cargarCatalogo(){
+  try {
+    const r = await fetch(FB_BASE + '/productos?pageSize=300&key=' + FB_KEY);
+    if (!r.ok) return false;
+    const docs = (await r.json()).documents || [];
+    if (!docs.length) return false;
+    const m = {};
+    for (const d of docs){
+      const id = d.name.split('/').pop(); const f = d.fields || {};
+      const p = f.precio ? parseInt(String(f.precio.integerValue ?? f.precio.doubleValue ?? '').split('.')[0]) : null;
+      m[id] = {precio: isNaN(p) ? null : p, activo: f.activo ? f.activo.booleanValue !== false : true};
+    }
+    for (let i = PRODS.length - 1; i >= 0; i--){
+      const d = m[slug(PRODS[i].nombre)];
+      if (!d) continue;
+      if (!d.activo) PRODS.splice(i,1); else if (d.precio) PRODS[i].precio = d.precio;
+    }
+    return true;
+  } catch(e){ return false; }
+}
+
+/* =====================================================================
+   UTILIDADES
+   ===================================================================== */
+const ICONS = {"wa": [["M3.6 20.4001L4.9 16.2001C3.84792 14.3949 3.48905 12.2684 3.89043 10.2178C4.2918 8.16731 5.42597 6.33303 7.08104 5.05769C8.73612 3.78235 10.7989 3.15317 12.884 3.28771C14.9691 3.42225 16.9339 4.31129 18.4113 5.78875C19.8888 7.26621 20.7779 9.23103 20.9124 11.3161C21.0469 13.4012 20.4177 15.464 19.1424 17.1191C17.8671 18.7741 16.0328 19.9083 13.9823 20.3097C11.9318 20.7111 9.80524 20.3523 8 19.3001L3.6 20.4001Z", 1.1, false], ["M9.2 8.30013C8.8 11.2001 12.6 15.1001 15.7 14.7001L16.6 13.3001L14.6 12.2001L13.7 13.0001C12.6 12.5001 11.4 11.3001 10.9 10.2001L11.7 9.30013L10.6 7.30013L9.2 8.30013Z", 1.1, false]], "ig": [["M15.5 3.5H8.5C5.73857 3.5 3.5 5.73857 3.5 8.5V15.5C3.5 18.2614 5.73857 20.5 8.5 20.5H15.5C18.2614 20.5 20.5 18.2614 20.5 15.5V8.5C20.5 5.73857 18.2614 3.5 15.5 3.5Z", 2.2, false], ["M12 16C14.2091 16 16 14.2091 16 12C16 9.79087 14.2091 8 12 8C9.79087 8 8 9.79087 8 12C8 14.2091 9.79087 16 12 16Z", 2.2, false], ["M17.2 7.4C17.5314 7.4 17.8 7.1314 17.8 6.8C17.8 6.46866 17.5314 6.20003 17.2 6.20003C16.8687 6.20003 16.6 6.46866 16.6 6.8C16.6 7.1314 16.8687 7.4 17.2 7.4Z", 2.2, false]], "tiktok": [["M12.2434 3.01476C13.2102 3 14.1696 3.00738 15.129 3C15.188 4.12914 15.594 5.28042 16.4206 6.07746C17.2471 6.89664 18.4132 7.27302 19.5497 7.39848V10.3726C18.487 10.3357 17.4168 10.1143 16.4501 9.65676C16.0294 9.46488 15.6383 9.22134 15.2545 8.97042C15.2471 11.1254 15.2618 13.2803 15.2398 15.4279C15.1807 16.4611 14.8412 17.487 14.2434 18.3356C13.2766 19.7526 11.6014 20.675 9.88184 20.7046C8.8265 20.7637 7.77116 20.4758 6.8708 19.9445C5.38004 19.0662 4.33208 17.4575 4.1771 15.7306C4.16234 15.3616 4.15496 14.9925 4.16972 14.6309C4.30256 13.2287 4.99628 11.8855 6.07376 10.9704C7.29884 9.90768 9.011 9.39846 10.6125 9.70104C10.6272 10.7933 10.5829 11.8855 10.5829 12.9778C9.85232 12.7416 8.99624 12.808 8.35418 13.2508C7.88924 13.5534 7.535 14.0183 7.3505 14.5423C7.19552 14.9187 7.2398 15.332 7.24718 15.7306C7.4243 16.9409 8.59034 17.9593 9.83018 17.8486C10.6567 17.8412 11.4464 17.3615 11.8744 16.6604C12.0147 16.4168 12.1696 16.1659 12.177 15.8782C12.2508 14.5571 12.2213 13.2434 12.2287 11.9224C12.2361 8.94828 12.2213 5.98152 12.2434 3.01476Z", 0.0, true]], "mail": [["M19.5 5.5H4.5C3.67 5.5 3 6.17 3 7V17C3 17.83 3.67 18.5 4.5 18.5H19.5C20.33 18.5 21 17.83 21 17V7C21 6.17 20.33 5.5 19.5 5.5Z", 1.5, false], ["M3.5 6.5L12 13L20.5 6.5", 1.5, false]], "pin": [["M12 21C12 21 5.5 15.2 5.5 10C5.5 6.41 8.41 3.5 12 3.5C15.59 3.5 18.5 6.41 18.5 10C18.5 15.2 12 21 12 21Z", 1.5, false], ["M12 12.3C13.27 12.3 14.3 11.27 14.3 10C14.3 8.73 13.27 7.7 12 7.7C10.73 7.7 9.7 8.73 9.7 10C9.7 11.27 10.73 12.3 12 12.3Z", 1.5, false]], "clock": [["M12 20.5C16.69 20.5 20.5 16.69 20.5 12C20.5 7.31 16.69 3.5 12 3.5C7.31 3.5 3.5 7.31 3.5 12C3.5 16.69 7.31 20.5 12 20.5Z", 1.5, false], ["M12 7.5V12L15 14", 1.5, false]], "card": [["M19.5 5.5H4.5C3.4 5.5 2.5 6.4 2.5 7.5V16.5C2.5 17.6 3.4 18.5 4.5 18.5H19.5C20.6 18.5 21.5 17.6 21.5 16.5V7.5C21.5 6.4 20.6 5.5 19.5 5.5Z", 1.5, false], ["M2.5 9.8H21.5M6 15H10", 1.5, false]], "cash": [["M20 6.5H4C3.17 6.5 2.5 7.17 2.5 8V16C2.5 16.83 3.17 17.5 4 17.5H20C20.83 17.5 21.5 16.83 21.5 16V8C21.5 7.17 20.83 6.5 20 6.5Z", 1.5, false], ["M12 14.6C13.44 14.6 14.6 13.44 14.6 12C14.6 10.56 13.44 9.4 12 9.4C10.56 9.4 9.39999 10.56 9.39999 12C9.39999 13.44 10.56 14.6 12 14.6Z", 1.5, false], ["M6 9.5V14.5M18 9.5V14.5", 1.5, false]], "store": [["M4 9.5V20H20V9.5M9.5 20V15H14.5V20M3 9.5L4.8 4.5H19.2L21 9.5H3Z", 1.5, false]], "tr": [["M4 8.5H19M15.5 5L19 8.5L15.5 12M20 15.5H5M8.5 12L5 15.5L8.5 19", 1.5, false]], "tag": [["M3.5 12.5V4.5C3.5 3.95 3.95 3.5 4.5 3.5H12.5L20.5 11.5L11.5 20.5L3.5 12.5Z", 1.5, false], ["M8.00001 9.3C8.72001 9.3 9.30001 8.72 9.30001 8C9.30001 7.28 8.72001 6.7 8.00001 6.7C7.28001 6.7 6.70001 7.28 6.70001 8C6.70001 8.72 7.28001 9.3 8.00001 9.3Z", 1.5, false]], "check": [["M5 12.5L9.5 17L19 7.5", 1.5, false]], "arr": [["M4.5 12H19.5M14 6.5L19.5 12L14 17.5", 1.5, false]], "back": [["M19.5 12H4.5M10 6.5L4.5 12L10 17.5", 1.5, false]], "heart": [["M12 20C12 20 4.5 15.4 4.5 10C4.55 9.15 4.85 8.34 5.37 7.66C5.88 6.99 6.58 6.48 7.38 6.2C8.19 5.92 9.05 5.89 9.87 6.1C10.69 6.31 11.43 6.77 12 7.4C12.57 6.77 13.31 6.31 14.13 6.1C14.95 5.89 15.81 5.92 16.62 6.2C17.42 6.48 18.12 6.99 18.63 7.66C19.15 8.34 19.45 9.15 19.5 10C19.5 15.4 12 20 12 20Z", 1.5, false]], "spark": [["M12 3.5V7.5M12 16.5V20.5M3.5 12H7.5M16.5 12H20.5M6 6L8.5 8.5M15.5 15.5L18 18M6 18L8.5 15.5M15.5 8.5L18 6", 1.5, false]], "home": [["M4 10.5L12 4L20 10.5V19.5C20 20.05 19.55 20.5 19 20.5H14.5V14.5H9.5V20.5H5C4.45 20.5 4 20.05 4 19.5V10.5Z", 1.5, false]], "bag": [["M6 7.5H18L19.2 20.5H4.8L6 7.5Z", 1.5, false], ["M9 10V6.5C9 4.84 10.34 3.5 12 3.5C13.66 3.5 15 4.84 15 6.5V10", 1.5, false]], "chat": [["M20.5 12C20.5 16.42 16.69 20 12 20C10.6 20 9.28 19.68 8.12 19.12L3.5 20.5L4.88 16.6C4.01 15.29 3.5 13.7 3.5 12C3.5 7.58 7.31 4 12 4C16.69 4 20.5 7.58 20.5 12Z", 1.5, false]], "menu": [["M3.5 7H20.5M3.5 12H20.5M3.5 17H14", 1.5, false]], "close": [["M6 6L18 18M18 6L6 18", 1.5, false]], "chevron": [["M9 5.5L15.5 12L9 18.5", 1.5, false]], "gift": [["M4 11H20V20.5H4V11Z", 1.5, false], ["M3 7.5H21V11H3V7.5Z", 1.5, false], ["M12 7.5V20.5", 1.5, false], ["M12 7.5C12 7.5 11 3.5 8.5 3.5C7.12 3.5 6.5 4.4 6.5 5.4C6.5 6.6 7.6 7.5 9 7.5H12Z", 1.5, false], ["M12 7.5C12 7.5 13 3.5 15.5 3.5C16.88 3.5 17.5 4.4 17.5 5.4C17.5 6.6 16.4 7.5 15 7.5H12Z", 1.5, false]], "bell": [["M18 9.5C18 6.19 15.31 3.5 12 3.5C8.69 3.5 6 6.19 6 9.5V14L4.5 17H19.5L18 14V9.5Z", 1.5, false], ["M10 20C10.4 20.6 11.15 21 12 21C12.85 21 13.6 20.6 14 20", 1.5, false]], "copy": [["M9 9H19.5V19.5H9V9Z", 1.5, false], ["M15 9V4.5H4.5V15H9", 1.5, false]], "star": [["M12 3.5L14.6 8.8L20.5 9.7L16.25 13.8L17.25 19.6L12 16.85L6.75 19.6L7.75 13.8L3.5 9.7L9.4 8.8L12 3.5Z", 1.5, false]]};
+function ico(name, size, extra){
+  const parts = ICONS[name] || [];
+  const p = parts.map(([d,w,fill]) => fill
+    ? `<path d="${d}" fill="currentColor"/>`
+    : `<path d="${d}" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`).join('');
+  return `<svg class="i" width="${size}" height="${size}" viewBox="0 0 24 24" ${extra||''}>${p}</svg>`;
+}
+function pintarIconos(root){
+  (root||document).querySelectorAll('svg[data-i]').forEach(s=>{
+    const n = s.getAttribute('data-i'); s.removeAttribute('data-i');
+    s.setAttribute('viewBox','0 0 24 24');
+    s.innerHTML = ico(n, 24).replace(/^<svg[^>]*>|<\/svg>$/g,'');
+  });
+}
+const money = v => '$' + String(v).replace(/\B(?=(\d{3})+(?!\d))/g,'.');
+const cuota = v => money(Math.round(v/3));
+function slug(n){
+  const de='áàäâãéèëêíìïîóòöôõúùüûñç', a='aaaaaeeeeiiiiooooouuuunc';
+  return n.toLowerCase().split('').map(c=>{const i=de.indexOf(c);return i>=0?a[i]:c;}).join('')
+    .replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'');
+}
+const esc = s => String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const porNombre = n => PRODS.find(p=>p.nombre===n);
+function leer(k){ try { return localStorage.getItem(k); } catch(e){ return null; } }
+function guardar(k,v){ try { localStorage.setItem(k,v); } catch(e){} }
+function toast(msg){ const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('on'); clearTimeout(t._h); t._h=setTimeout(()=>t.classList.remove('on'),2200); }
+function waProducto(p){ return 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent('¡Hola! Quiero consultar por este producto de Alma Buena: ' + p.nombre + ' 😊'); }
+
+function tarjeta(p){
+  const href = '#/producto/' + slug(p.nombre);
+  return `<article class="card">
+    <a class="ph" href="${href}"><img loading="lazy" src="${IMG}${p.img}.jpg" alt="${esc(p.nombre)}"></a>
+    <div class="cuerpo">
+      <a class="nm" href="${href}">${esc(p.nombre)}</a>
+      <div class="pr">${money(p.precio)}</div>
+      <div class="cu">3 cuotas sin interés de ${cuota(p.precio)}</div>
+      <div class="dots">${p.dots.map(c=>`<i style="background:${c}"></i>`).join('')}<span>${esc(p.colorCard)}</span></div>
+    </div>
+    <a class="btn btn-linea" href="${href}">Ver producto</a>
+  </article>`;
+}
+function encabezado(eyebrow, titulo, derecha){
+  return `<div class="sec-head"><div><p class="eyebrow">${eyebrow}</p><h2 class="h2">${titulo}</h2></div>${derecha||''}</div>`;
+}
+
+/* =====================================================================
+   PÁGINAS
+   ===================================================================== */
+function pInicio(){
+  const cats = Object.keys(CAT_IMG).map(c=>`
+    <a class="cat-card" href="#/productos/${slug(c)}">
+      <div class="ph"><img loading="lazy" src="${IMG}${CAT_IMG[c]}.jpg" alt="${c}"></div>
+      <div class="nm">${c} ${ico('arr',16)}</div>
+    </a>`).join('');
+  return `
+  <section class="hero"><img src="${IMG}banner_app.png" alt="Alma Buena Indumentaria"></section>
+  <section class="benef"><div class="wrap">
+    <div class="benef-it">${ico('card',28)}<div><b>3 cuotas sin interés</b><small>Con tarjetas de crédito bancarias</small></div></div>
+    <div class="benef-it">${ico('card',28)}<div><b>5 cuotas sin interés</b><small>Con Tarjeta Naranja</small></div></div>
+    <div class="benef-it">${ico('cash',28)}<div><b>20% OFF</b><small>En efectivo o transferencia</small></div></div>
+    <a class="benef-it" href="${MAPS}" target="_blank" rel="noopener">${ico('store',28)}<div><b>Retiro en el local</b><small>Paso de los Andes 1997, Mendoza</small></div></a>
+  </div></section>
+  <section class="cats"><div class="wrap">
+    ${encabezado('Explorá','Comprá por categoría',`<a class="link-arr" href="#/productos">Ver todo ${ico('arr',18)}</a>`)}
+    <div class="cat-grid">${cats}</div>
+  </div></section>
+  <section class="nove"><div class="wrap">
+    ${encabezado('Recién llegado','Novedades',`<a class="link-arr" href="#/productos">Ver catálogo completo ${ico('arr',18)}</a>`)}
+    <div class="grid">${NOVEDADES.map(porNombre).filter(Boolean).map(tarjeta).join('')}</div>
+  </div></section>
+  <section class="ruleta-band"><div class="wrap">
+    <div>
+      <p class="eyebrow">Ruleta de beneficios</p>
+      <h2 class="h2">Girá la ruleta y ganá un beneficio</h2>
+      <p>Tenés un giro de regalo: podés ganar 50% OFF en una prenda, 10% OFF en toda tu compra o un 2x1. Válido por 7 días.</p>
+      <button class="btn btn-blanco" type="button" data-ruleta style="margin-top:22px">${ico('star',18)} Girar la ruleta</button>
+    </div>
+    <canvas class="mini" width="640" height="640" data-ruleta aria-label="Abrir la ruleta"></canvas>
+  </div></section>
+  <section class="nos-res">
+    <div class="ph"><img loading="lazy" src="${IMG}nosotras.jpg" alt="Marisa y Marti"></div>
+    <div class="tx">
+      <p class="eyebrow">Nuestra historia</p>
+      <h3>Somos Marisa y Marti, mamá e hija.</h3>
+      <p>Creamos Alma Buena desde ese vínculo que nos acompaña todos los días, para ayudarte a encontrar ese outfit que te haga sentir cómoda, segura y auténtica.</p>
+      <a class="btn btn-linea" href="#/nosotras">Conocé nuestra historia ${ico('arr',18)}</a>
+    </div>
+  </section>
+  <section class="ig"><div class="wrap">
+    <div style="color:var(--bordo);display:flex;justify-content:center">${ico('ig',36)}</div>
+    <p class="eyebrow" style="margin-top:20px">Seguinos</p>
+    <h3>@almabuena.ind</h3>
+    <p>Mirá los ingresos nuevos, los looks de la semana y todo lo que pasa en el local.</p>
+    <a class="btn btn-bordo" href="${IG}" target="_blank" rel="noopener">${ico('ig',18)} Ir a Instagram</a>
+  </div></section>`;
+}
+
+function pProductos(catSlug){
+  const cat = CATS.find(c=>slug(c)===catSlug) || 'Todo';
+  const lista = cat==='Todo' ? CATS : [cat];
+  const total = cat==='Todo' ? PRODS.length : PRODS.filter(p=>p.cat===cat).length;
+  const chips = ['Todo',...CATS].map(c=>`<a class="chip ${c===cat?'on':''}" href="#/productos${c==='Todo'?'':'/'+slug(c)}" style="display:inline-flex;align-items:center">${c}</a>`).join('');
+  const secs = lista.map(c=>{
+    const ps = PRODS.filter(p=>p.cat===c);
+    if (!ps.length) return '';
+    return `<section class="cat-sec"><div class="wrap">
+      <div class="t"><h2>${c}</h2><span>${CAT_SUB[c]}</span></div>
+      <div class="grid">${ps.map(tarjeta).join('')}</div>
+    </div></section>`;
+  }).join('');
+  return `
+  <section class="cat-head"><div class="wrap">
+    <div class="migas"><a href="#/">Inicio</a><span>/</span>${cat==='Todo'?'<b>Productos</b>':'<a href="#/productos">Productos</a><span>/</span><b>'+cat+'</b>'}</div>
+    <p class="eyebrow" style="margin-top:36px">Catálogo</p>
+    <h1 class="h1">${cat==='Todo'?'Todas nuestras prendas':cat}</h1>
+    <div class="aviso">${ico('tag',18,'style="color:var(--bordo)"')}Precios publicados. Pagando en efectivo o transferencia tenés 20% OFF sobre el precio publicado.</div>
+  </div></section>
+  <div class="filtros"><div class="wrap"><div class="chips">${chips}</div><span class="count">${total} productos</span></div></div>
+  ${secs}
+  <section class="cierre"><div class="wrap">
+    <h3>¿No encontrás tu talle o color?</h3>
+    <p>Escribinos y te contamos qué hay en el local.</p>
+    <a class="btn btn-bordo" data-wa href="#" target="_blank" rel="noopener">${ico('wa',18)} Consultar por WhatsApp</a>
+  </div></section>`;
+}
+
+const estadoDet = {color:0, talle:-1};
+function pDetalle(s){
+  const idx = PRODS.findIndex(p=>slug(p.nombre)===s);
+  if (idx < 0) return pProductos();
+  const p = PRODS[idx];
+  const cs = Math.min(estadoDet.color, p.dots.length-1);
+  const colorNom = cs===0 ? p.color : (COLOR_NAMES[p.dots[cs]] || p.color);
+  const esJean = p.cat==='Jeans';
+  const talles = esJean ? ['34','36','38','40','42','44'] : ['S','M','L'];
+  const sinStock = esJean ? 5 : -1;
+  // relacionados (misma lógica que la app)
+  const rel = [];
+  for (let i=0;i<PRODS.length && rel.length<2;i++) if (i!==idx && PRODS[i].cat===p.cat) rel.push(i);
+  for (let k=1; rel.length<4 && k<PRODS.length; k++){ const j=(idx+k*7)%PRODS.length; if (j!==idx && !rel.includes(j) && PRODS[j].cat!==p.cat) rel.push(j); }
+  // beneficio de la ruleta
+  const premio = premioVigente();
+  let benef = '';
+  if (premio){
+    const info = PREMIOS[premio];
+    const paga = premio==='50' ? 'pagás ' + money(Math.round(p.precio*.5)) : premio==='10' ? 'pagás ' + money(Math.round(p.precio*.9)) : 'llevás 2 y pagás 1';
+    const url = 'https://wa.me/' + WA_NUM + '?text=' + encodeURIComponent('¡Hola! Quiero usar mi beneficio de la ruleta (' + info.big + ', código ' + info.code + ') en: ' + p.nombre);
+    benef = `<div class="benef-ruleta">${ico('gift',22,'style="color:var(--bordo)"')}<div><b>Beneficio ruleta: ${info.big}</b><small>Código ${info.code} · ${paga}</small></div><a class="btn btn-bordo" href="${url}" target="_blank" rel="noopener" data-consulta="${esc(p.nombre)}">Aplicar</a></div>`;
+  }
+  const catNombre = p.cat==='Tops y remeras' ? 'tops y remeras' : p.cat.toLowerCase();
+  return `
+  <div class="wrap">
+    <div class="det-top">
+      <div class="migas"><a href="#/">Inicio</a><span>/</span><a href="#/productos">Productos</a><span>/</span><a href="#/productos/${slug(p.cat)}">${p.cat}</a><span>/</span><b>${esc(p.nombre)}</b></div>
+      <a class="volver" href="#/productos">${ico('back',18)} Volver al catálogo</a>
+    </div>
+    <section class="det">
+      <div class="gal">
+        <div class="mini"><button class="on" type="button"><img src="${IMG}${p.img}.jpg" alt=""></button></div>
+        <div class="big"><img src="${IMG}${p.img}.jpg" alt="${esc(p.nombre)}"></div>
+      </div>
+      <div class="info">
+        <p class="eyebrow">${p.cat}</p>
+        <h1>${esc(p.nombre)}</h1>
+        <div class="precio">${money(p.precio)}</div>
+        <div class="cuo">3 cuotas sin interés de ${cuota(p.precio)}</div>
+        <div class="desc-box">${ico('cash',22,'style="color:var(--bordo);margin-top:2px"')}<div><b>${money(Math.round(p.precio*.8))} en efectivo o transferencia</b><small>20% OFF. El descuento no está incluido en el precio publicado: se aplica al momento de la compra.</small></div></div>
+        ${benef}
+        <div class="lbl">Color: <span>${esc(colorNom)}</span></div>
+        <div class="colores">${p.dots.map((c,i)=>`<button type="button" class="${i===cs?'on':''}" data-color="${i}" aria-label="${COLOR_NAMES[c]||''}"><i style="background:${c}"></i></button>`).join('')}</div>
+        <div class="lbl">Talle${estadoDet.talle>=0 && talles[estadoDet.talle] ? ': <span>'+talles[estadoDet.talle]+'</span>':''}</div>
+        <div class="talles">${talles.map((t,i)=>`<button type="button" class="${i===sinStock?'off':(i===estadoDet.talle?'on':'')}" data-talle="${i}" ${i===sinStock?'aria-disabled="true"':''}>${t}</button>`).join('')}</div>
+        ${esJean ? '<div class="aviso-st">Talle 44: sin stock por el momento. Consultanos por WhatsApp.</div>' : ''}
+        <div class="acciones">
+          <a class="btn btn-bordo" href="${waProducto(p)}" target="_blank" rel="noopener" data-consulta="${esc(p.nombre)}">${ico('wa',18)} Consultar por WhatsApp</a>
+          <a class="btn btn-linea" href="#/productos/${slug(p.cat)}">Ver más ${catNombre}</a>
+        </div>
+        <a class="retiro" href="${MAPS}" target="_blank" rel="noopener">${ico('store',20)} Retiralo en Paso de los Andes 1997, Mendoza</a>
+        <div class="div"></div>
+        <h4>Descripción</h4>
+        <p class="d">${CAT_DESC[p.cat]}</p>
+        <div class="bul">${CAT_BUL[p.cat].map(b=>`<div>${ico('check',18,'style="color:var(--bordo)"')}${b}</div>`).join('')}</div>
+        <div class="div"></div>
+        <h4>Medios de pago</h4>
+        <div class="medios">
+          <div>${ico('card',22)}<span><b>Tarjetas de crédito bancarias</b><small>3 cuotas sin interés</small></span></div>
+          <div>${ico('card',22)}<span><b>Tarjeta Naranja</b><small>5 cuotas sin interés</small></span></div>
+          <div>${ico('tr',22)}<span><b>Transferencia</b><small>20% OFF sobre el precio publicado</small></span></div>
+          <div>${ico('cash',22)}<span><b>Efectivo</b><small>20% OFF sobre el precio publicado</small></span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <section class="rel"><div class="wrap">
+    ${encabezado('Combiná tu look','También te puede gustar')}
+    <div class="grid">${rel.map(i=>tarjeta(PRODS[i])).join('')}</div>
+  </div></section>`;
+}
+
+function pNosotras(){
+  return `
+  <section class="nos-hero">
+    <div class="ph"><img src="${IMG}nosotras.jpg" alt="Marisa y Marti"></div>
+    <div class="tx">
+      <p class="eyebrow">Nuestra historia</p>
+      <h1 class="h1" style="font-size:52px">Sobre nosotras</h1>
+      <p>Somos Marisa y Marti, mamá e hija, y creamos Alma Buena desde ese vínculo que nos acompaña todos los días.</p>
+      <p>Nuestra idea es poder ayudar a otras personas a encontrar ese outfit que las haga sentirse cómodas, seguras y auténticas, incluso en los momentos difíciles.</p>
+      <p>Así como nos acompañamos entre nosotras, queremos que cada persona que llegue a Alma Buena también pueda sentirse acompañada, porque creemos que sentirse bien con una misma muchas veces empieza por algo tan simple como la ropa que elegimos usar.</p>
+      <div class="firma">— Marisa &amp; Marti</div>
+    </div>
+  </section>
+  <section class="valores"><div class="wrap">
+    <p class="eyebrow">Lo que nos mueve</p>
+    <h2 class="h2">Cómo queremos que te sientas</h2>
+    <div class="val-grid">
+      <div class="val"><div class="c">${ico('heart',30)}</div><h3>Cómoda</h3><p>Prendas para moverte libre y sentirte bien de la mañana a la noche.</p></div>
+      <div class="val"><div class="c">${ico('spark',30)}</div><h3>Segura</h3><p>Ropa que te acompaña y te hace sentir firme, incluso en los días difíciles.</p></div>
+      <div class="val"><div class="c">${ico('check',30)}</div><h3>Auténtica</h3><p>Elegir lo que va con vos, con tu estilo y tu momento, sin seguir moldes.</p></div>
+    </div>
+  </div></section>
+  <section class="visit"><div class="wrap">
+    <div>
+      <p class="eyebrow">Visitanos</p>
+      <h3>Te esperamos en el local</h3>
+      <div class="dir">${ico('pin',20,'style="color:var(--bordo)"')}Paso de los Andes 1997, Mendoza · Lunes a sábado 10:00–13:30 y 17:30–20:30 hs</div>
+    </div>
+    <div class="bts">
+      <a class="btn btn-bordo" href="#/productos">Ver catálogo ${ico('arr',18)}</a>
+      <a class="btn btn-linea" href="${MAPS}" target="_blank" rel="noopener">${ico('pin',18)} Cómo llegar</a>
+    </div>
+  </div></section>`;
+}
+
+function pPagos(){
+  const li = t => `<li>${ico('check',18)}<span>${t}</span></li>`;
+  return `
+  <section class="pg-head"><div class="wrap">
+    <p class="eyebrow">Cómo pagar</p>
+    <h1 class="h1">Métodos de pago</h1>
+    <p class="lead">Elegí la forma que te quede más cómoda. Todos los precios publicados son de lista.</p>
+  </div></section>
+  <div class="wrap">
+    <section class="pagos">
+      <div class="pago"><div class="c">${ico('card',32)}</div><h3>Tarjetas bancarizadas</h3><span class="pill">Hasta 5 cuotas sin interés</span>
+        <ul>${li('3 cuotas sin interés con tarjetas de crédito bancarias.')}${li('5 cuotas sin interés con Tarjeta Naranja.')}</ul></div>
+      <div class="pago"><div class="c">${ico('tr',32)}</div><h3>Transferencia</h3><span class="pill">20% OFF</span>
+        <ul>${li('Te pasamos los datos por WhatsApp cuando confirmás tu prenda.')}${li('Aplicá el 20% sobre el precio publicado.')}</ul></div>
+      <div class="pago"><div class="c">${ico('cash',32)}</div><h3>Efectivo</h3><span class="pill">20% OFF</span>
+        <ul>${li('Pagás en el local al retirar tu compra.')}${li('Aplicá el 20% sobre el precio publicado.')}</ul></div>
+    </section>
+    <section class="ejemplo">
+      <div><p class="eyebrow">Ejemplo</p><h3>¿Cómo calculo el 20% OFF?</h3>
+        <p>El precio publicado no incluye el descuento. Al momento de la compra, restale el 20% al precio publicado para conocer el precio final.</p></div>
+      <div class="calc">
+        <div class="bx"><small>Precio publicado</small><b>$50.000</b></div><span class="op">−</span>
+        <div class="bx"><small>20% OFF</small><b>$10.000</b></div><span class="op">=</span>
+        <div class="bx fin"><small>Pagás</small><b>$40.000</b></div>
+      </div>
+    </section>
+  </div>
+  <section class="cierre" style="padding-top:0"><div class="wrap">
+    <h3>¿Tenés dudas con el pago?</h3>
+    <p>Escribinos y te ayudamos a elegir la mejor opción.</p>
+    <a class="btn btn-bordo" data-wa href="#" target="_blank" rel="noopener">${ico('wa',18)} Consultar por WhatsApp</a>
+  </div></section>`;
+}
+
+function pContacto(){
+  const canal = (href, i, t, v, acc, ext) => `<a class="canal" href="${href}" ${ext?'target="_blank" rel="noopener"':''} ${i==='wa'?'data-wa':''}>
+    <span class="l"><span class="c">${ico(i,26)}</span><span><small>${t}</small><b>${v}</b></span></span>
+    <span class="r">${acc} ${ico('arr',18)}</span></a>`;
+  return `
+  <section class="pg-head"><div class="wrap">
+    <p class="eyebrow">Estamos para ayudarte</p>
+    <h1 class="h1">Nuestros contactos</h1>
+    <p class="lead">Escribinos por el canal que prefieras o vení a conocernos al local.</p>
+  </div></section>
+  <div class="wrap"><section class="ct">
+    <div>
+      ${canal('#','wa','WhatsApp','+54 261 639 - 5545','Escribinos',true)}
+      ${canal(IG,'ig','Instagram','@almabuena.ind','Seguinos',true)}
+      ${canal('https://www.tiktok.com/@almabuena.ind','tiktok','TikTok','@almabuena.ind','Seguinos',true)}
+      ${canal('mailto:almabuena.ind@gmail.com','mail','Email','almabuena.ind@gmail.com','Enviar mail',false)}
+      ${canal(MAPS,'pin','Ubicación','Paso de los Andes 1997, Mendoza','Cómo llegar',true)}
+    </div>
+    <div>
+      <a class="mapa" href="${MAPS}" target="_blank" rel="noopener" aria-label="Ver en Google Maps"><img src="${IMG}mapa.jpg" alt="Mapa: Alma Buena Indumentaria, Paso de los Andes 1997, Mendoza"></a>
+      <div class="horarios">
+        <div class="t">${ico('clock',22,'style="color:var(--bordo)"')} Horarios</div>
+        <div class="f"><b style="font-weight:500">Lunes a sábado</b><span>10:00 – 13:30 hs · 17:30 – 20:30 hs</span></div>
+        <div class="f"><b style="font-weight:500">Domingo</b><span>Cerrado</span></div>
+      </div>
+    </div>
+  </section></div>`;
+}
+
+function pComunidad(){
+  const it = (i,t,s) => `<li><span class="c">${ico(i,20)}</span><span><b>${t}</b><small>${s}</small></span></li>`;
+  return `
+  <section class="comu-pg">
+    <div class="izq">
+      <p class="eyebrow">Comunidad Alma Buena</p>
+      <h1 class="h1">Sumate a la comunidad</h1>
+      <p style="margin-top:14px">Sumate con tu mail y te avisamos de ingresos nuevos, descuentos exclusivos y novedades del local.</p>
+      <ul>
+        ${it('bag','Ingresos nuevos','Las prendas nuevas antes que nadie.')}
+        ${it('tag','Descuentos exclusivos','Promos solo para la comunidad.')}
+        ${it('bell','Novedades del local','Eventos, horarios especiales y más.')}
+      </ul>
+    </div>
+    <div class="der"><div class="form-mail" data-form></div></div>
+  </section>`;
+}
+
+/* ---------- formulario de comunidad (guarda en Firebase) ---------- */
+function montarFormularios(){
+  document.querySelectorAll('[data-form]').forEach(f=>{
+    if (f._listo) return; f._listo = true;
+    if (leer('ab_suscripta')){ formOK(f, leer('ab_suscripta')); return; }
+    f.innerHTML = `<form novalidate>
+      <label class="t" for="m_${f.offsetTop}">Tu mail</label>
+      <div class="row">
+        <input type="email" id="m_${f.offsetTop}" placeholder="tumail@gmail.com" autocomplete="email" required>
+        <button class="btn btn-bordo" type="submit">Sumarme</button>
+      </div>
+      <label class="chk"><input type="checkbox" checked> Quiero recibir notificaciones de descuentos, ingresos nuevos y novedades.</label>
+      <div class="err" role="alert"></div>
+      <div class="fine">Podés darte de baja cuando quieras. No compartimos tu mail.</div>
+    </form>`;
+    const form = f.querySelector('form'), inp = f.querySelector('input[type=email]'), chk = f.querySelector('input[type=checkbox]'),
+          err = f.querySelector('.err'), btn = f.querySelector('button');
+    form.addEventListener('submit', async e=>{
+      e.preventDefault();
+      const v = inp.value.trim();
+      if (!/^[^@ ]+@[^@ ]+[.][^@ ]+$/.test(v)){ err.textContent = 'Escribí un mail válido, por ejemplo nombre@gmail.com'; inp.focus(); return; }
+      err.textContent = ''; btn.disabled = true; btn.textContent = 'Guardando…';
+      try {
+        await suscribir(v, chk.checked);
+        guardar('ab_suscripta', v.toLowerCase());
+        document.querySelectorAll('[data-form]').forEach(x=>formOK(x, v.toLowerCase()));
+      } catch(ex){
+        err.textContent = 'No pudimos guardar tu mail. Revisá tu conexión e intentá de nuevo.';
+        btn.disabled = false; btn.textContent = 'Sumarme';
+      }
+    });
+  });
+}
+function formOK(f, mail){
+  f.innerHTML = `<div class="ok-box"><div class="circ">${ico('check',30)}</div>
+    <p class="eyebrow">¡Ya estás!</p><h4>Ya sos parte de nuestra comunidad</h4>
+    <p>Te vamos a avisar a <b>${esc(mail)}</b> cuando haya descuentos, ingresos nuevos y novedades. ¡Vas a ser la primera en enterarte!</p>
+    <a class="btn btn-linea" href="#/productos" style="margin-top:20px">Ver catálogo</a></div>`;
+}
+
+/* =====================================================================
+   RULETA (misma rueda y premios que la app)
+   ===================================================================== */
+const SEGS = ['50','10','2x1','nada','50','10','2x1','nada'];
+const PREMIOS = {
+  '50': {titulo:'¡Ganaste 50% OFF!', sub:'Usalo en tu próxima compra en Alma Buena.', big:'50% OFF', desc:'en una prenda a elección', code:'ALMA50'},
+  '10': {titulo:'¡Ganaste 10% OFF!', sub:'Usalo en tu próxima compra en Alma Buena.', big:'10% OFF', desc:'en toda tu compra', code:'ALMA10'},
+  '2x1':{titulo:'¡Ganaste un 2x1!', sub:'Llevate dos prendas y pagá una.', big:'2x1', desc:'en prendas', code:'ALMA2X1'},
+};
+function premioVigente(){
+  const p = leer('ab_premio'), t = +leer('ab_premio_t') || 0;
+  return (PREMIOS[p] && Date.now() - t < 7*864e5) ? p : null;
+}
+function dibujarRueda(cv){
+  const ctx = cv.getContext('2d'), s = cv.width/320;
+  ctx.setTransform(s,0,0,s,0,0); ctx.clearRect(0,0,320,320);
+  const c = 160;
+  ctx.fillStyle = '#5F1725'; ctx.beginPath(); ctx.arc(c,c,160,0,2*Math.PI); ctx.fill();
+  ctx.strokeStyle = 'rgba(232,207,211,.5)'; ctx.lineWidth = 1; ctx.beginPath(); ctx.arc(c,c,156,0,2*Math.PI); ctx.stroke();
+  for (let i=0;i<16;i++){ const a=-Math.PI/2+i*Math.PI/8; ctx.fillStyle = i%2===0?'#F3D9A4':'#FFFFFF';
+    ctx.beginPath(); ctx.arc(c+Math.cos(a)*150.5, c+Math.sin(a)*150.5, 3.5, 0, 2*Math.PI); ctx.fill(); }
+  const fills = ['#121212','#F3F0EA','#5F1725','#F4ECED'];
+  for (let i=0;i<8;i++){ const st=-Math.PI/2-Math.PI/8+i*Math.PI/4;
+    ctx.beginPath(); ctx.moveTo(c,c); ctx.arc(c,c,142,st,st+Math.PI/4); ctx.closePath();
+    ctx.fillStyle = fills[i%4]; ctx.fill(); ctx.strokeStyle='#fff'; ctx.lineWidth=1.5; ctx.stroke(); }
+  ctx.textAlign='center'; ctx.textBaseline='middle';
+  for (let i=0;i<8;i++){ const a=-Math.PI/2+i*Math.PI/4, k=i%4;
+    ctx.save(); ctx.translate(c,c); ctx.rotate(a); ctx.translate(95,0);
+    if (k===0){ ctx.fillStyle='#fff'; ctx.font='700 16px Montserrat'; ctx.fillText('50% OFF',0,0); }
+    else if (k===1){ ctx.fillStyle='#5F1725'; ctx.font='700 16px Montserrat'; ctx.fillText('10% OFF',0,0); }
+    else if (k===2){ ctx.fillStyle='#fff'; ctx.font='700 22px Montserrat'; ctx.fillText('2x1',0,0); }
+    else { ctx.fillStyle='#5F1725'; ctx.font='600 10px Montserrat'; ctx.fillText('Seguí',0,-6); ctx.fillText('participando',0,6); }
+    ctx.restore(); }
+}
+let angulo = 0, girando = false;
+function abrirRuleta(){
+  const m = document.getElementById('ruleta');
+  guardar('ab_ruleta_vista','1');
+  const yaJugo = leer('ab_premio');
+  if (yaJugo) mostrarResultado(yaJugo, false);
+  else { document.getElementById('rRes').style.display='none'; document.getElementById('rIzq').style.display=''; document.getElementById('rDer').style.display=''; }
+  m.classList.add('on'); document.body.style.overflow='hidden';
+}
+function cerrarRuleta(){ document.getElementById('ruleta').classList.remove('on'); document.body.style.overflow=''; }
+function girar(){
+  if (girando) return; girando = true;
+  const b = document.getElementById('btnGirar'); b.querySelector('span').textContent = 'Girando…'; b.disabled = true;
+  const i = Math.floor(Math.random()*8), jitter = (Math.random()-.5)*30;
+  angulo = angulo - (angulo % 360) + 360*6 + ((360 - i*45) % 360) + jitter;
+  const cv = document.getElementById('rueda'); cv.style.transform = `rotate(${angulo}deg)`;
+  setTimeout(()=>{
+    const premio = SEGS[i];
+    registrarGiro(premio, PREMIOS[premio] ? PREMIOS[premio].code : null);
+    guardar('ab_premio', premio); guardar('ab_premio_t', String(Date.now()));
+    setTimeout(()=>{ mostrarResultado(premio, true); girando=false; b.disabled=false; b.querySelector('span').textContent='Girá ahora'; }, 700);
+  }, 4300);
+}
+function mostrarResultado(premio, nuevo){
+  document.getElementById('rIzq').style.display='none'; document.getElementById('rDer').style.display='none';
+  const r = document.getElementById('rRes'); r.style.display='block';
+  if (!PREMIOS[premio]){
+    r.innerHTML = `<div class="ic">${ico('bell',36)}</div><p class="eyebrow">¡Uy, casi!</p><h2>Seguí participando</h2>
+      <p style="max-width:420px;margin:0 auto">Esta vez no salió premio, pero sumate a la comunidad y enterate primero de las próximas promos.</p>
+      <div class="bts"><a class="btn btn-blanco" href="#/comunidad" data-cerrar>Sumarme a la comunidad ${ico('arr',18)}</a><a class="btn btn-tr" href="#/" data-cerrar>Ir al inicio</a></div>`;
+  } else {
+    const p = PREMIOS[premio];
+    r.innerHTML = `${nuevo?'<canvas class="confeti" width="880" height="260"></canvas>':''}
+      <div class="ic">${ico('gift',36)}</div><p class="eyebrow">¡Felicitaciones!</p><h2>${p.titulo}</h2><p>${p.sub}</p>
+      <div class="cupon"><div class="tb">TU BENEFICIO</div><div class="big">${p.big}</div><div class="ds">${p.desc}</div><div class="dash"></div>
+        <div class="cod"><span style="font-size:13px;color:var(--gris)">Código</span><b>${p.code}</b><button type="button" data-copiar="${p.code}">${ico('copy',16)} Copiar</button></div>
+        <div class="vl">Válido por 7 días · No acumulable con otras promociones.</div></div>
+      <div class="bts"><a class="btn btn-blanco" href="#/productos" data-cerrar>Usar mi beneficio ${ico('arr',18)}</a><a class="btn btn-tr" href="#/" data-cerrar>Ir al inicio</a></div>`;
+    const cf = r.querySelector('canvas.confeti'); if (cf) confeti(cf);
+  }
+}
+function confeti(cv){
+  const ctx = cv.getContext('2d'), cols=['#F3D9A4','#fff','#E8CFD3','#C0262D'];
+  const ps = Array.from({length:90},()=>({x:Math.random()*880,y:-Math.random()*200,v:2+Math.random()*3,r:Math.random()*6.28,s:4+Math.random()*5,c:cols[Math.floor(Math.random()*4)]}));
+  let n=0; (function f(){ ctx.clearRect(0,0,880,260);
+    ps.forEach(p=>{ p.y+=p.v; p.r+=.08; ctx.save(); ctx.translate(p.x,p.y); ctx.rotate(p.r); ctx.fillStyle=p.c; ctx.fillRect(-p.s/2,-p.s/4,p.s,p.s/2); ctx.restore(); });
+    if (++n<160) requestAnimationFrame(f); else ctx.clearRect(0,0,880,260); })();
+}
+
+/* =====================================================================
+   NAVEGACIÓN
+   ===================================================================== */
+function render(){
+  const h = location.hash.replace(/^#/,'') || '/';
+  const [_, a, b] = h.split('/');
+  let html, nav;
+  if (!a){ html = pInicio(); nav='inicio'; }
+  else if (a==='productos'){ html = pProductos(b); nav='productos'; }
+  else if (a==='producto'){ html = pDetalle(b); nav='productos'; }
+  else if (a==='nosotras'){ html = pNosotras(); nav='nosotras'; }
+  else if (a==='pagos'){ html = pPagos(); nav='pagos'; }
+  else if (a==='contacto'){ html = pContacto(); nav='contacto'; }
+  else if (a==='comunidad'){ html = pComunidad(); nav='comunidad'; }
+  else if (a==='ruleta'){ html = pInicio(); nav='inicio'; setTimeout(abrirRuleta, 50); }
+  else { html = pInicio(); nav='inicio'; }
+  const app = document.getElementById('app');
+  app.innerHTML = html;
+  document.querySelectorAll('[data-nav]').forEach(x=>x.classList.toggle('on', x.dataset.nav===nav));
+  document.getElementById('comuBand').style.display = nav==='comunidad' ? 'none' : '';
+  prepararLinks(document);
+  app.querySelectorAll('canvas.mini').forEach(dibujarRueda);
+  montarFormularios();
+  const titulos = {inicio:'Alma Buena Indumentaria · Mendoza', productos:'Catálogo · Alma Buena', nosotras:'Sobre nosotras · Alma Buena', pagos:'Métodos de pago · Alma Buena', contacto:'Contacto · Alma Buena', comunidad:'Comunidad · Alma Buena'};
+  document.title = a==='producto' && document.querySelector('.info h1') ? document.querySelector('.info h1').textContent + ' · Alma Buena' : titulos[nav];
+}
+function prepararLinks(root){
+  root.querySelectorAll('a[data-wa]').forEach(x=>x.href = WA_GENERAL);
+}
+
+let ultimaRuta = null, prodActual = null;
+window.addEventListener('hashchange', ()=>{
+  const ruta = location.hash.split('/').slice(0,3).join('/');
+  const m = location.hash.match(/^#\/producto\/(.+)$/);
+  if (m && m[1] !== prodActual){ estadoDet.color = 0; estadoDet.talle = -1; }
+  prodActual = m ? m[1] : null;
+  render();
+  if (ruta !== ultimaRuta) window.scrollTo({top:0, behavior:'instant'});
+  ultimaRuta = ruta;
+});
+
+document.addEventListener('click', e=>{
+  const t = e.target.closest('[data-ruleta]'); if (t){ e.preventDefault(); abrirRuleta(); return; }
+  const c = e.target.closest('[data-cerrar]'); if (c){ cerrarRuleta(); if (c.tagName==='BUTTON') e.preventDefault(); return; }
+  if (e.target.id === 'ruleta'){ cerrarRuleta(); return; }
+  const cp = e.target.closest('[data-copiar]');
+  if (cp){ const v = cp.dataset.copiar; (navigator.clipboard ? navigator.clipboard.writeText(v) : Promise.reject()).then(()=>toast('Código ' + v + ' copiado'), ()=>toast('Tu código es ' + v)); return; }
+  const cons = e.target.closest('[data-consulta]'); if (cons) registrarConsulta(cons.dataset.consulta);
+  const col = e.target.closest('[data-color]');
+  if (col){ estadoDet.color = +col.dataset.color; render(); return; }
+  const ta = e.target.closest('[data-talle]');
+  if (ta){ if (ta.classList.contains('off')){ toast('Talle sin stock por el momento. Consultanos por WhatsApp.'); return; }
+    estadoDet.talle = +ta.dataset.talle; render(); return; }
+});
+document.addEventListener('keydown', e=>{ if (e.key==='Escape') cerrarRuleta(); });
+document.getElementById('btnGirar').addEventListener('click', girar);
+
+/* ---------- arranque ---------- */
+pintarIconos();
+document.fonts && document.fonts.load('700 16px Montserrat').then(()=>{ dibujarRueda(document.getElementById('rueda')); document.querySelectorAll('canvas.mini').forEach(dibujarRueda); });
+dibujarRueda(document.getElementById('rueda'));
+const m0 = location.hash.match(/^#\/producto\/(.+)$/); if (m0) prodActual = m0[1];
+ultimaRuta = location.hash.split('/').slice(0,3).join('/');
+render();
+cargarCatalogo().then(cambio=>{ if (cambio) render(); });
+// La primera vez que alguien entra, aparece la ruleta (como en la app)
+if (!leer('ab_ruleta_vista') && !location.hash.startsWith('#/ruleta')) setTimeout(abrirRuleta, 1200);
+</script>
+</body>
+</html>
