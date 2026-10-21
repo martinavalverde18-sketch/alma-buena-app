@@ -1,11 +1,11 @@
 {
-    "name": "alma_buena",
-    "short_name": "alma_buena",
-    "start_url": ".",
+    "name": "Alma Buena",
+    "short_name": "Alma Buena",
+    "start_url": "./",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#121212",
+    "theme_color": "#5F1725",
+    "description": "Alma Buena Indumentaria — Mendoza. Catálogo, beneficios y comunidad.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [
