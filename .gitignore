@@ -18,3 +18,8 @@ build/
 **/ios/.symlinks/
 **/ios/Flutter/Generated.xcconfig
 **/ios/Flutter/flutter_export_environment.sh
+
+# Firma de la app (nunca subir)
+android/key.properties
+*.jks
+*.keystore

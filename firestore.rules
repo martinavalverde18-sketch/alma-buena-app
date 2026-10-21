@@ -1,0 +1,37 @@
+rules_version = '2';
+// Reglas de seguridad de la base de datos de Alma Buena (Cloud Firestore).
+// La app puede LEER el catálogo y AGREGAR suscripciones, giros y consultas.
+// No puede leer los mails, modificar ni borrar nada: eso se hace desde la
+// consola de Firebase.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    match /productos/{id} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    match /suscriptores/{email} {
+      allow create: if request.resource.data.keys().hasOnly(['email', 'notificaciones', 'plataforma', 'creado'])
+        && request.resource.data.email is string
+        && request.resource.data.email == email
+        && request.resource.data.email.size() <= 120
+        && request.resource.data.email.matches('^[^@ ]+@[^@ ]+[.][^@ ]+$')
+        && request.resource.data.notificaciones is bool;
+      allow read, update, delete: if false;
+    }
+
+    match /giros_ruleta/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['premio', 'codigo', 'plataforma', 'creado'])
+        && request.resource.data.premio in ['50', '10', '2x1', 'nada'];
+      allow read, update, delete: if false;
+    }
+
+    match /consultas/{id} {
+      allow create: if request.resource.data.keys().hasOnly(['producto', 'plataforma', 'creado'])
+        && request.resource.data.producto is string
+        && request.resource.data.producto.size() <= 120;
+      allow read, update, delete: if false;
+    }
+  }
+}
