@@ -57,7 +57,7 @@ jobs:
           fi
 
       - name: Compilar la app de Android
-        run: flutter build apk --release
+        run: flutter build apk --release --target-platform android-arm,android-arm64
 
       - name: Renombrar el archivo
         run: cp build/app/outputs/flutter-apk/app-release.apk alma-buena.apk
