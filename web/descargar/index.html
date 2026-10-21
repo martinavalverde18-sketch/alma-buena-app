@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#5F1725">
+<title>Descargá la app · Alma Buena</title>
+<meta name="description" content="App de Alma Buena Indumentaria (Mendoza). Descargala para Android o usala desde el iPhone.">
+<link rel="icon" href="../icons/Icon-192.png">
+<link rel="apple-touch-icon" href="../icons/Icon-192.png">
+<style>
+  @font-face{font-family:Montserrat;font-weight:400;src:url(../assets/assets/fonts/Montserrat-Regular.ttf)}
+  @font-face{font-family:Montserrat;font-weight:600;src:url(../assets/assets/fonts/Montserrat-SemiBold.ttf)}
+  @font-face{font-family:Montserrat;font-weight:700;src:url(../assets/assets/fonts/Montserrat-Bold.ttf)}
+  :root{--bordo:#5F1725;--oscuro:#1A0A0D;--rosa:#E8CFD3;--crema:#F7F3F0;--negro:#121212}
+  *{box-sizing:border-box}
+  html{min-height:100%;background:var(--oscuro) linear-gradient(180deg,var(--bordo) 0,var(--oscuro) 900px) no-repeat}
+  body{margin:0;font-family:Montserrat,system-ui,-apple-system,"Segoe UI",sans-serif;color:#fff;
+       display:flex;justify-content:center;padding:max(28px,env(safe-area-inset-top)) 20px 40px}
+  main{width:100%;max-width:420px;text-align:center}
+  .logo{width:112px;height:112px;border-radius:26px;background:#fff;margin:8px auto 18px;
+        display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+  .logo img{width:96px;height:96px}
+  .eyebrow{font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:var(--rosa);margin:0}
+  h1{font-size:28px;line-height:1.15;margin:10px 0 8px}
+  .sub{font-size:14px;line-height:1.5;color:var(--rosa);margin:0 0 26px}
+  .btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;min-height:56px;
+       padding:14px 20px;border-radius:14px;font:600 15px/1.2 inherit;letter-spacing:.06em;
+       text-transform:uppercase;text-decoration:none;border:0;cursor:pointer}
+  .btn svg{flex:none}
+  .primario{background:#fff;color:var(--bordo);box-shadow:0 8px 20px rgba(0,0,0,.3)}
+  .secundario{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.6);margin-top:12px}
+  .nota{font-size:12px;color:#d9b9be;margin:10px 0 0}
+  .card{background:#fff;color:var(--negro);border-radius:18px;padding:20px 20px 8px;text-align:left;margin-top:26px}
+  .card h2{font-size:15px;margin:0 0 12px;color:var(--bordo)}
+  ol{margin:0;padding:0;list-style:none;counter-reset:p}
+  li{counter-increment:p;position:relative;padding-left:38px;min-height:26px;font-size:14px;line-height:1.45;margin-bottom:14px}
+  li::before{content:counter(p);position:absolute;left:0;top:-1px;width:26px;height:26px;border-radius:50%;background:var(--bordo);
+             color:#fff;font-weight:700;font-size:13px;display:grid;place-items:center}
+  .oculto{display:none}
+  .otros{margin-top:26px;font-size:13px;color:var(--rosa)}
+  .otros a{color:#fff}
+  footer{margin-top:34px;font-size:11px;letter-spacing:.16em;color:#bfa3a8}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo"><img src="../icons/Icon-192.png" alt="Alma Buena"></div>
+  <p class="eyebrow">Alma Buena Indumentaria</p>
+  <h1>Descargá nuestra app</h1>
+  <p class="sub">Catálogo, ruleta de beneficios, comunidad y consultas por WhatsApp.</p>
+
+  <!-- ANDROID -->
+  <section id="android" class="oculto">
+    <a class="btn primario" href="https://github.com/martinavalverde18-sketch/alma-buena-app/releases/latest/download/alma-buena.apk">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></svg>
+      Descargar app para Android
+    </a>
+    <p class="nota">Gratis · Android 7 o superior</p>
+    <div class="card">
+      <h2>Cómo instalarla</h2>
+      <ol>
+        <li>Tocá <b>Descargar app para Android</b> y esperá que baje el archivo <b>alma-buena.apk</b>.</li>
+        <li>Abrí el archivo (desde la notificación o desde <i>Descargas</i>) y tocá <b>Instalar</b>.</li>
+        <li>Si el celular pregunta, tocá <b>Configuración → Permitir de esta fuente</b>. Si aparece un aviso de Play Protect, tocá <b>Instalar de todas formas</b>.</li>
+        <li>¡Listo! Abrí <b>Alma Buena</b> desde tus apps.</li>
+      </ol>
+    </div>
+    <a class="btn secundario" href="../">Probar sin instalar</a>
+  </section>
+
+  <!-- IPHONE -->
+  <section id="ios" class="oculto">
+    <a class="btn primario" href="../">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      Abrir la app
+    </a>
+    <p class="nota">Funciona al instante en Safari, sin instalar nada</p>
+    <div class="card">
+      <h2>Para tenerla como app en tu iPhone</h2>
+      <ol>
+        <li>Tocá <b>Abrir la app</b> (en Safari).</li>
+        <li>Tocá el botón <b>Compartir</b> (el cuadrado con la flecha hacia arriba).</li>
+        <li>Elegí <b>Agregar a pantalla de inicio</b> y tocá <b>Agregar</b>.</li>
+        <li>¡Listo! Queda el ícono de <b>Alma Buena</b> junto a tus apps.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- COMPUTADORA / OTROS -->
+  <section id="otro" class="oculto">
+    <a class="btn primario" href="../">Abrir la app en el navegador</a>
+    <a class="btn secundario" href="https://github.com/martinavalverde18-sketch/alma-buena-app/releases/latest/download/alma-buena.apk">Descargar APK (Android)</a>
+    <p class="nota">Desde el celular, escaneá el código QR para instalarla.</p>
+  </section>
+
+  <p class="otros">¿Tenés otro celular? <a href="#" id="verTodo">Ver todas las opciones</a></p>
+  <footer>MENDOZA · ARGENTINA</footer>
+</main>
+<script>
+  var ua = navigator.userAgent || '';
+  var esIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var esAndroid = /Android/i.test(ua);
+  document.getElementById(esAndroid ? 'android' : esIOS ? 'ios' : 'otro').classList.remove('oculto');
+  document.getElementById('verTodo').addEventListener('click', function (e) {
+    e.preventDefault();
+    ['android', 'ios', 'otro'].forEach(function (id) { document.getElementById(id).classList.remove('oculto'); });
+    this.parentNode.style.display = 'none';
+  });
+</script>
+</body>
+</html>
