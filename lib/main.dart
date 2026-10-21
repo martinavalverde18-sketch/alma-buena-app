@@ -61,6 +61,63 @@ class AlmaBuena extends StatelessWidget {
         ),
       ),
       routerConfig: _router,
+      builder: (context, child) => _MarcoCelular(child: child!),
+    );
+  }
+}
+
+/// En pantallas anchas (computadora o tablet) muestra la app con el tamaño
+/// del frame del Figma (390 × 844), centrada como un celular. En el
+/// celular no cambia nada: la app ocupa toda la pantalla.
+class _MarcoCelular extends StatelessWidget {
+  const _MarcoCelular({required this.child});
+
+  final Widget child;
+
+  static const double _ancho = 390;
+  static const double _alto = 844;
+
+  @override
+  Widget build(BuildContext context) {
+    final mq = MediaQuery.of(context);
+    if (mq.size.width < 600) return child;
+
+    final alto = (mq.size.height - 48).clamp(560.0, _alto);
+    return ColoredBox(
+      color: const Color(0xFF1A0A0D),
+      child: DecoratedBox(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF5F1725), Color(0xFF1A0A0D)],
+          ),
+        ),
+        child: Center(
+          child: Container(
+            width: _ancho,
+            height: alto,
+            clipBehavior: Clip.antiAlias,
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(28),
+              boxShadow: const [
+                BoxShadow(
+                    color: Color(0x66000000), blurRadius: 40, offset: Offset(0, 16)),
+              ],
+            ),
+            child: MediaQuery(
+              data: mq.copyWith(
+                size: Size(_ancho, alto),
+                padding: EdgeInsets.zero,
+                viewPadding: EdgeInsets.zero,
+                viewInsets: EdgeInsets.zero,
+              ),
+              child: child,
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
