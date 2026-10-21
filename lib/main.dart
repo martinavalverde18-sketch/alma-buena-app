@@ -7,6 +7,8 @@ import 'alma_buena_app.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // Trae precios y prendas visibles desde Firebase mientras se ve el splash.
+  cargarCatalogoDesdeFirebase();
   runApp(const AlmaBuena());
 }
 
